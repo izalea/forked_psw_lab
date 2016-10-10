@@ -13,42 +13,56 @@
 	
 	<body> 
 		
-		<h1>Tables</h1>
-		<p><center><table border = "1" width = "500">
+		<h1>MENU Z CENAMI</h1>
+		<p><center><table border = "1" width = "1000">
 			<caption>
-				A table.
-				First column is names, second is numbers, prices maybe?
+				Wybierz pizzę jaką tylko chcesz!
 			</caption>
 			<thead>
-				<tr rowspan = "2"> <!-- table row -->
-					<th>Name</th> <!-- table heading cell -->
-					<th>Price</th>
+				<tr>
+					<th rowspan = "2" colspan = "2">Obrazek</th>
+					<th colspan = "3">WIELKOŚĆ</th>
+				</tr>
+				<tr>
+					<th>Mała</th>
+					<th>Średnia</th>
+					<th>Duża</th>
 				</tr>
 			</thead>
 			
-			<tfoot> <!-- footer -->
-				<tr>
-					<th>Total</th>
-					<th>$3.75</th>
-				</tr>
-			</tfoot>
-			
 			<tbody>
+			<!-- pizza1 -->
 				<tr>
-					<td>Apple</td>
-					<td>$0.25</td>
+					<th rowspan = "2"><img src="pizza1.jpg" width="100" height="100" alt="Pizza pepperoni"></th>
+					<th>PEPPERONI</th>
+					<td rowspan = "2">cena1mala</td>
+					<td rowspan = "2">cena1srednia</td>
+					<td rowspan = "2">cena1duza</td>
 				</tr>
 				<tr>
-					<td>Orange</td>
-					<td>$0.50</td>
+					<td>Kiełbasa pepperoni, ser mozzarella, ziołowy sos pomidorowy</td>
+				</tr>
+			<!-- pizza2 -->
+				<tr>
+					<th rowspan = "2"><img src="pizza2.jpg" width="100" height="100" alt="Pizza margherita"></th>
+					<th>MARGHERITA</th>
+					<td rowspan = "2">cena2mala</td>
+					<td rowspan = "2">cena2srednia</td>
+					<td rowspan = "2">cena2duza</td>
 				</tr>
 				<tr>
-					<td>Banana</td>
-					<td>$1.00</td>
+					<td>Ser mozzarella, ziołowy sos pomidorowy</td>
+				</tr>
+			<!-- pizza3 -->
+				<tr>
+					<th rowspan = "2"><img src="pizza3.jpg" width="100" height="100" alt="Pizza wielka uczta"></th>
+					<th>WIELKA UCZTA</th>
+					<td rowspan = "2">cena3mala</td>
+					<td rowspan = "2">cena3srednia</td>
+					<td rowspan = "2">cena3duza</td>
 				</tr>
 				<tr>
-					<td>Pineapple</td>
-					<td>$2.00</td>
+					<td width = >Wybierz dowolne dwie duże pizze, rolsy lub pieczywo czosnkowe, zestaw 3 sosów, a Pepsi 1 L dostaniesz w prezencie!</td>
 				</tr>
 			</tbody>
 		</table></center></p>
