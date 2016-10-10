@@ -1,22 +1,28 @@
-<!DOCTYPE html> <!-- document type declaration, must be included to render properly! -->
+<!DOCTYPE html> 
 
-<!-- main.html -->
-<!-- Home for training... -->
-
-<html> <!-- start tag -->
+<!-- kontakt.html -->
+<html> 
 	
-	<head> <!-- +document formatting instructions(css and scripts) -->
-		<meta charset = "utf-8"> <!-- attributes: name=value -->
-		<title>Kontakt</title> <!-- top of browser, fav or bookmarks, search engines use this for indexing lol -->
+	<head> 
+		<meta charset = "utf-8">
+		<title>Kontakt</title> 
+		<meta name="keywords" content="kontakt, formularz kontaktowy, kontak pizzeria">
+		<meta name="description" content="Formularz do kontaktu z pizzerią.">
 	</head>
+	
+	<!-- content -->
+	
+	<body> 
 		<form>
 			<fieldset>
+				
 				<legend><h2>Informacja kontaktowa</h2></legend></br>
-				<label>Name:	<input name = "name" type = "text" size = "25" maxlength = "30"></label></br></br>
-				<label>Email: <input name = "email" type="email"></label></br>
-				<h4>Wybierz miasto</h4>
+				<label>Imię:<input name = "name" type = "text" size = "25" maxlength = "30"></label></br></br>
+				<label>Email:<input name = "email" type="email"></label></br>
+				
+				<h4>Wybierz miasto:</h4>
 				<select name="miasta">
-					<optgroup label="listaMiast">
+					<optgroup label="Lista miast">
 						<option>Kraków</option>
 						<option>Opole</option>
 						<option>Wrocław</option>
@@ -24,22 +30,25 @@
 						<option>Poznań</option>				
 					</optgroup>
 				</select></br></br>
-				<label>Dodatkowa informacja: <textarea rows="4" cols="50" maxlength="200"></textarea></label></br>
-				<h4>Płeć</h4>
-				<input type="radio" name="gender" value="male" checked> Male</br>
-				<input type="radio" name="gender" value="female"> Female</br>
-				<h4>Kiedy zamawiasz pizze</h4>
-				<input type="checkbox" name="animal" value="Cat" />W domu <br />
-                <input type="checkbox" name="animal" value="Dog" />W pracy<br />
-                <input type="checkbox" name="animal" value="Bird" />Zawsze<br /> 
+				
+				<label>Dodatkowa informacja:</br><textarea rows="4" cols="50" maxlength="200"></textarea></label></br>
+				
+				<h4>Płeć:</h4>
+					<input type="radio" name="gender" value="male" checked>Mężczyzna</br>
+					<input type="radio" name="gender" value="female">Kobieta</br>
+				<h4>Skąd zwykle zamawiasz pizzę?</h4>
+					<input type="checkbox" name="place" value="home" />Z domu <br />
+					<input type="checkbox" name="place" value="work" />Z pracy<br />
+					<input type="checkbox" name="place" value="everywhere" />Z każdego miejsca!<br /> 
 			</fieldset></br>
 		</form>
-		<a href="\pliki\plik.txt">Pobierz regulamin</a></br></br>
-		<label><input type="checkbox">Regulamin</label></br></br>
+		<p>Pobierz regulamin
+			<a href="ftp://ftp.funet.fi/pub/standards/RFC/rfc959.txt">FTP</a> lub 
+			<a href="https://www.ietf.org/rfc/rfc1867.txt">HTTP</a>.
+		</p></br>
+		<label><input type="checkbox">Zgadzam się z Regulaminem</label></br></br>
 		<input type = "submit" value = "Wyślij">
 		<input type = "reset" value = "Wyczyść">
 		
-	<body> <!-- content -->
-
 	</body>
 </html> <!-- end tag -->
