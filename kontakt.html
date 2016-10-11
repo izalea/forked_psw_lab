@@ -15,12 +15,16 @@
 	<!-- content -->
 	
 	<body> 
+
 		
 		
 		<form method = "post" action = "http://www.google.com">
+
 			<fieldset>
 				
-				<legend><h2>Informacja kontaktowa</h2></legend></br>
+				<legend><h2>Informacja kontaktowa</h2></legend>
+				<h3><b>Tel.: 111-222-333</b></h3>
+				<h3><b>111-222-444</b></h3>
 				<label>Imię:<input name = "name" type = "text" size = "25" maxlength = "30"></label></br></br>
 				<label>Email:<input name = "email" type="email"></label></br>
 				
@@ -35,7 +39,7 @@
 					</optgroup>
 				</select></br></br>
 				
-				<label>Dodatkowa informacja(max 200 znaków!):</br><textarea rows="4" cols="50" maxlength="200"></textarea></label></br>
+				<label>Dodatkowa informacja:</br><textarea rows="4" cols="50" maxlength="200"></textarea></label></br>
 				
 				<h4>Płeć:</h4>
 					<input type="radio" name="gender" value="male" checked>Mężczyzna</br>
@@ -46,7 +50,6 @@
 					<input type="checkbox" name="place" value="work" />Z pracy<br />
 					<input type="checkbox" name="place" value="everywhere" />Z każdego miejsca!<br /> 
 			</fieldset></br>
-		
 			<p>Pobierz regulamin
 				<a href="ftp://ftp.funet.fi/pub/standards/RFC/rfc959.txt">FTP</a> lub 
 				<a href="https://www.ietf.org/rfc/rfc1867.txt">HTTP</a>.
@@ -55,5 +58,7 @@
 			<input type = "submit" value = "Wyślij">
 			<input type = "reset" value = "Wyczyść">
 		</form>
+		
+		
 	</body>
 </html>
