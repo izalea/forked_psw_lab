@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+
+<!-- kontakt.html -->
+<html> 
+	
+	<head> 
+		<meta charset = "utf-8">
+		<title>Ankieta - powiedz coś więcej o sobie!</title> 
+		<meta name="keywords" content="ankieta, dodatkowa ankieta, pytania, odpowiedz">
+		<meta name="description" content="Dodatkowa aniketa dzięki której poznamy wasze zainteresowania!">
+		<meta name="author" content="Sylwia i Hanna">
+		<link rel="icon" type="image/x-icon" href="pizza_icon.ico">				
+	</head>
+	
+	<!-- content -->
+	
+	<body> 
+		<h1>ANKIETA!</h1>
+		
+		<form method = "post" action = "http://www.google.com">
+			
+			<fieldset>
+			<h3>Podaj swój ulubiony:</h3>
+			<ul>
+				<li><p><label>Kolor:
+					<input type = "color" autofocus />
+						(Kod heksadecymalny, np. #ADD8E6)
+				</label></p></li>
+				
+				<li><p><label>Miesiąc:
+					<input type = "month"/>
+						(yyyy-mm)
+				</label></p></li>
+			</ul>
+			</fieldset>
+			<fieldset>
+			<h3>Oceń wygląd naszej strony:</h3>
+			<p><label>Zakres:
+				0<input type = "range"
+						min = "0"
+						max = "10"
+						value = "5"
+				/>10
+			</label></p>
+			
+			<h3>Wyszukaj na stronie:</h3>
+			<p><label>Szukaj:
+				<input type = "search" placeholder = "zapytanie"/>
+			</label>(Wprowadź swoje zapytanie tutaj)</p>
+			
+			<h3>Podaj swoją stronę:</h3>
+			<p><label>URL:
+				<input type = "url" 
+						placeholder = "http://www.domain.com" />
+						(http://www.domain.com)
+			</label></p>
+			
+	<!--	<p><label>Data:
+				<input type = "date"/>
+					(yyyy-mm-dd)
+			</label></p>
+			
+			<p><label>Data i czas:
+				<input type = "datetime"/>
+					(yyyy-mm-ddThh:mm, np. 2012-01-27T02:15)
+			</label></p>
+			
+			<p><label>Lokalna data i czas:
+				<input type = "datetime-local"/>
+					(yyyy-mm-ddThh:mm, np. 2012-01-27T02:15)
+			</label></p>
+					
+			<p><label>Email:
+				<input type = "email" placeholder = "name@domain.com" required/>
+					(name@domain.com)
+			</label></p>
+			
+			<p><label>Cyfra:
+				<input type = "number"
+						min = "0"
+						max = "7"
+						step = "1"
+						value = "4"/>
+			</label>(Wprowadź cyfrę z przedziału od 0 do 7 włącznie)</p>
+			<p><label>Tel:
+				<input type = "tel" placeholder = "###-###-###"
+						pattern = "\d{3}-\d{3}-\d{3}" required />
+						(###-###-###)
+			</label></p>
+			
+			<p><label>Time:
+				<input type = "time" /> (hh:mm:ss.ff)
+			</label></p>
+		
+			<p><label>Week:
+				<input type = "week" />
+						(yyyy-Wnn, np. 2012-W01)
+			</label></p>
+	-->			
+			<p>
+				<input type = "submit" value = "Wyślij" />
+				<input type = "reset" value = "Wyczyść" />
+			</p>
+			</fieldset>
+		</form>
+		
+		
+	</body>
+</html>
