@@ -16,26 +16,41 @@
 	<!-- content -->
 	
 	<body> 
+	
+	<!-- nested sections -->
 		<section id="title">
 			<h1>PIZZA z pieca <sup>&reg</sup></h1> 
-			<h2><p><a href="menu.html"><strong>ZAMÓW ONLINE</strong></a></p></h2> 
-			<h3><b>Tel.: 111-222-333</b></h3>
-			<h3><b>111-222-444</b></h3>
+			 
+			<section id ="contactInfo">
+				<h3><b>	
+						Tel.: 111-222-333<br>
+						111-222-444<br>
+						ul. Kolorowa 12<br>
+						54-487 Wrocław
+				</b></h3>
+			</section>
 			
-			<p><h3>Wyszukaj na stronie:</h3>
-				<label>Szukaj:
-					<input type = "search" placeholder = "zapytanie"/>
-				</label>(Wprowadź swoje zapytanie tutaj)
-			</p>
+			<section id="navigation">
+				<nav><ul>
+					<h2><p><a href="menu.html"><strong>ZAMÓW ONLINE</strong></a></p></h2>
+					<li><a href = "menu.html#menu"><b>Menu</b></a></li>
+					<li><a href = "menu.html#toppings"><b>Dodatkowe składniki</b></a></li>	
+					<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
+					<li><a href = "ankieta.html"><b>Ankieta!</b></a></li>
+				</ul></nav>
+			</section>
+
+			<section id="search">
+				<p><h3>Wyszukaj na stronie:</h3>
+					<label>Szukaj:
+						<input type = "search" placeholder = "zapytanie"/>
+					</label>(Wprowadź swoje zapytanie tutaj)
+				</p>
+			</section>
 		</section>
-		<section id="navigation">
-			<ul>
-				
-				<li><a href = "menu.html#menu"><b>Menu</b></a></li>
-				<li><a href = "menu.html#toppings"><b>Dodatkowe składniki</b></a></li>	
-				<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
-			</ul>
-		</section>
+		
+		
+		
 		<a href = "https://pl.wikipedia.org/wiki/Pizza">
 			<img src="pizza.jpg" alt="Pizza">
 		</a>
