@@ -33,12 +33,12 @@
 				</p> 
 				<p>
 					<label>
-						Nazwisko:<input type = "text" size = "25" maxlength = "50" required/> (Nazwisko)
+						Nazwisko:<input type = "text" size = "25" maxlength = "50" required/> (Nazwisko, wymagane)
 					</label>
 				</p>
 				<p>
 					<label>Email:
-						<input name = "email" type="email" required /> (adress@domain.com)
+						<input name = "email" type="email" required /> (address@domain.com, wymagane)
 					</label></br>
 				</p>
 				<p>
@@ -73,7 +73,7 @@
 				<p>
 					<label>
 						<input type = "tel" placeholder = "(###) ###-##-##" 
-						pattern = "\(\d{3}\) + \d{3}-\d{2}-\d{2}"/> (###) ###-##-##
+						pattern = "\(\d{3}\) +\d{3}-\d{2}-\d{2}"/> (###) ###-##-##
 					</label>
 				</p>
 				
@@ -87,8 +87,7 @@
 					<input type="checkbox" name="place" value="everywhere" />Z każdego miejsca!<br /> 
 				<p>
 					<label>Dodatkowa informacja:</br>
-						<textarea rows="4" cols="50" maxlength="200">
-						</textarea>
+						<textarea rows="4" cols="50" maxlength="200"/>
 					</label>
 				</p>
 			</fieldset></br>
@@ -96,9 +95,11 @@
 				<a href="ftp://ftp.funet.fi/pub/standards/RFC/rfc959.txt">FTP</a> lub 
 				<a href="https://www.ietf.org/rfc/rfc1867.txt">HTTP</a>.
 			</p></br>
-			<label><input type="checkbox">Zgadzam się z Regulaminem</label></br></br>
-			<input type = "submit" value = "Wyślij">
-			<input type = "reset" value = "Wyczyść">
+			<p>
+				<label><input type="checkbox">Zgadzam się z Regulaminem</label></br></br>
+				<input type = "submit" value = "Wyślij">
+				<input type = "reset" value = "Wyczyść">
+			</p>
 		</form>	
 	</body>
 	
