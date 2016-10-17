@@ -28,12 +28,12 @@
 				
 				<p>
 					<label>Imię:
-						<input type = "text" size = "25" maxlength = "30" autofocus/> (Imię)
+						<input id = "name" type = "text" size = "25" maxlength = "30" autofocus/> (Imię)
 					</label>
 				</p> 
 				<p>
 					<label>
-						Nazwisko:<input type = "text" size = "25" maxlength = "50" required/> (Nazwisko, wymagane)
+						Nazwisko:<input id = "surname" type = "text" size = "25" maxlength = "50" required/> (Nazwisko, wymagane)
 					</label>
 				</p>
 				<p>
@@ -72,7 +72,7 @@
 				</select></br></br>
 				<p>
 					<label>
-						<input type = "tel" placeholder = "(###) ###-##-##" 
+						<input id = "phone" type = "tel" placeholder = "(###) ###-##-##" 
 						pattern = "\(\d{3}\) +\d{3}-\d{2}-\d{2}"/> (###) ###-##-##
 					</label>
 				</p>
@@ -87,7 +87,7 @@
 					<input type="checkbox" name="place" value="everywhere" />Z każdego miejsca!<br /> 
 				<p>
 					<label>Dodatkowa informacja:</br>
-						<textarea rows="4" cols="50" maxlength="200"></textarea>
+						<textarea id = "additional_info" rows="4" cols="50" maxlength="200"></textarea>
 					</label>
 				</p>
 			</fieldset></br>
