@@ -39,7 +39,7 @@ static, fixed), left,right,top,bottom, float, clear)'
 
 10. Zaprezentuj regu³y CSS wykorzystuj¹ce wartoœci atrybutów znaczników HTML.'
 
-11. Zaprezentuj mo¿liwoœci u¿ycia regu³y @media.'
+Sylwia 11. Zaprezentuj mo¿liwoœci u¿ycia regu³y @media.'
 
 12. Zaprezentuj dzia³anie pseudklas CSS: '
 :active,:checked, :disabled, :empty, :enabled, :first, !
