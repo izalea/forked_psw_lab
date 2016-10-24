@@ -22,7 +22,7 @@ ograniczania (np. powtarzanie do po³owy wysokoœci strony) i rozci¹gania
 (background-color, background-image, background-repeat, backgroundattachment,
 background-position, background)'
 
-5. Zaprezentuj ró¿ne sposoby definiowania selektorów CSS i wraz z ich wykorzystaniem
+Zrobione 5. Zaprezentuj ró¿ne sposoby definiowania selektorów CSS i wraz z ich wykorzystaniem
 na stronie. Omów w jakich sytuacjach najlepiej je wykorzystywaæ (identyfikatory, klasy,
 zagnie¿dzenia, > )'
 
