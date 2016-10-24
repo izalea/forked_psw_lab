@@ -6,13 +6,13 @@ odwo³aniem do w zewnêtrznego arkusza stylów zgodnego z standardem CSS3.
 Wszystkie regu³y CSS, z wyj¹tkiem punktu 2, powinny byæ umieszczone w zewnêtrznym
 arkuszu stylów.
 
-1. Strona startowa zawiera odnoœniki do stron zawieraj¹cych kolejno: kilka akapitów
+Zrobione 1. Strona startowa zawiera odnoœniki do stron zawieraj¹cych kolejno: kilka akapitów
 tekstu, listê odnoœników, tabelê oraz formularz. Kodowanie wszystkich stron proszê
 ustawiæ jako utf-8. Ka¿da strona, posiada w³asny, unikatowy tytu³ oraz jest opatrzona
 meta danymi w szczególnoœci opisem oraz s³owami kluczowymi (na potrzeby
 pozycjonowania). '
 
-2. Zaprezentuje ró¿ne mo¿liwoœci osadzania regu³ CSS na stronie.'
+Zrobione 2. Zaprezentuje ró¿ne mo¿liwoœci osadzania regu³ CSS na stronie.'
 
 3. Zaprezentuj praktyczne wykorzystanie ró¿nych sposobów zmiany wielkoœci tekstu na
 stronie (em, px, pt, %)'
