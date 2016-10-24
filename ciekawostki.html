@@ -20,21 +20,22 @@
          p        { font-size: 50px;
                     font-family: arial, sans-serif; }
          .special { color: purple; }
-		 .myBG    {	background-image = url(PizzaLogo.jpg);
-					background-color: #333;
-					background-position: top left;	
-					background-repeat: no-repeat;	
-					background-attachment: fixed;
-					color: white;
-					font-family:arial, sans-serif;
-				  }
-      </style>
+		 
+		 .BG_IMG_REPEAT_VERTICAL_LEFT {
+					background-image: url(PizzaLogo.png);
+					background-color: powderBlue;
+					background-position: bottom-left;
+					background-repeat: repeat-y;
+					background-attachment: scroll;
+		 }
+		 
+		</style>
 	  
 	</head>
 	
 	<!-- content -->
 	
-	<body> 
+	<body class = "BG_IMG_REPEAT_VERTICAL_LEFT"> 
 
 		<section id="links">
 			<h2>Linki</h2>
@@ -49,7 +50,7 @@
 				</ul>	
 			</nav>			
 		</section>
-		<section id="facts" class = "myBG">
+		<section id="facts">
 			<h2>Fakty</h2>
 			<article>
 			<div id="backgroundOrigin">

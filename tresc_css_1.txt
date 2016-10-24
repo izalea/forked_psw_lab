@@ -17,7 +17,7 @@ Zrobione 2. Zaprezentuje ró¿ne mo¿liwoœci osadzania regu³ CSS na stronie.'
 Zrobione 3. Zaprezentuj praktyczne wykorzystanie ró¿nych sposobów zmiany wielkoœci tekstu na
 stronie (em, px, pt, %)'
 
-4. Zaprezentuj ró¿ne sposoby ustawienia t³a strony - jego pozycji, powtarzalnoœci,
+Zrobione 4. Zaprezentuj ró¿ne sposoby ustawienia t³a strony - jego pozycji, powtarzalnoœci,
 ograniczania (np. powtarzanie do po³owy wysokoœci strony) i rozci¹gania
 (background-color, background-image, background-repeat, backgroundattachment,
 background-position, background)'

@@ -87,7 +87,6 @@ a {
 
 .content-top {
 	margin-top: 0px;
-	background-image: url(content-top-logo.jpg);
 }
 
 .content-bottom {
@@ -138,6 +137,7 @@ a {
 }
 
 
+
 .pict {
 	margin: 0px 0px 0px 0px;
 	width: 100%;
@@ -164,7 +164,7 @@ a {
 	float: left;
 	width: 50%;
 	height: 40%;
-s}
+}
 
 .to-right {
     float: right;
@@ -181,5 +181,7 @@ s}
 .in-the-front{
 	z-index = 1;
 }
+
+
 
 
