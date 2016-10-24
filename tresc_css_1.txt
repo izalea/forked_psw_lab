@@ -30,10 +30,10 @@ zagnie¿dzenia, > )'
 elementów na stronie (margin, padding, width, height, position:(absolute, relative,
 static, fixed), left,right,top,bottom, float, clear)'
 
-7. Zaprezentuj ró¿ne sposoby formatowania tekstu oraz ustawianiej jego szerokoœci
+Zrobione 7. Zaprezentuj ró¿ne sposoby formatowania tekstu oraz ustawianiej jego szerokoœci
 (font-weight, font-style, font-variant, font-size, line-height, font-family)'
 
-8. Napisz regu³ê CSS stosuj¹c atrybut: border-width, border-style, border-color.!
+Zrobione 8. Napisz regu³ê CSS stosuj¹c atrybut: border-width, border-style, border-color.!
 
 9. Zaprezentuj ró¿ne mo¿liwoœæ stylowania tabel.'
 
