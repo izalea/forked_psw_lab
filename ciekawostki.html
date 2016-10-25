@@ -13,26 +13,64 @@
 		<link rel="icon" type="image/x-icon" href="pizza_icon.ico">		
 		
 		 <style type = "text/css">
-         em       { font-weight: bold;
-                    color: black; }   
-         h1       { font-family: tahoma, helvetica, sans-serif; 
-					color: red;}
-         p        { font-size: 50px;
-                    font-family: arial, sans-serif; }
-         .special { color: purple; }
-		 
-		 .BG_IMG_REPEAT_VERTICAL_LEFT {
-					background-image: url(PizzaLogo.png);
-					background-color: powderBlue;
-					background-position: bottom-left;
-					background-repeat: repeat-y;
-					background-attachment: scroll;
-					
-		 }
-		 #id_color_green_big {
-			color: green;
-			font-size: 3em;
+        
+		
+		 @media all
+         {
+				a:active { 
+					background-color: yellow;
+				}
+				em       { font-weight: bold;
+							color: black; }   
+				h1       { font-family: tahoma, helvetica, sans-serif; 
+							color: red;}
+				p        { font-size: 50px;
+						font-family: arial, sans-serif; }
+				p:nth-child(even) {
+					background: red;
+				}
+				p:nth-last-child(even) {
+					background: blue;
+				}
+				p:first-child { 
+					color: yellow;
+				}
+			 .special { color: purple; }
+			 
+			 .BG_IMG_REPEAT_VERTICAL_LEFT {
+						background-image: url(PizzaLogo.png);
+						background-color: powderBlue;
+						background-position: bottom-left;
+						background-repeat: repeat-y;
+						background-attachment: scroll;
+						
+			 }
+			 #id_color_green_big {
+				color: green;
+				font-size: 3em;
 		}
+         @media print
+         {
+            em       { font-weight: bold;
+							color: black; }   
+			h1       { font-family: "times new roman", times, serif;
+							color: red;}
+			p        { font-size: 50px;
+						font-family: "times new roman", times, serif;}
+			 .special { color: purple; }
+			 
+			 .BG_IMG_REPEAT_VERTICAL_LEFT {
+						background-image: url(PizzaLogo.png);
+						background-color: white;
+						background-position: bottom-left;
+						background-repeat: no-repeat;
+						background-attachment: fixed;
+						
+			 }
+			 #id_color_green_big {
+				color: darkgreen;
+				font-size: 3em;
+         } /* End @media print declaration. */
 		 
 		</style>
 	  
@@ -65,7 +103,7 @@
 						</em>
 					</p>
 				</header>
-				<hr>
+				<hr><div>
 					<p style = "font-size = 1.5em">
 						Zalukaj(i/em/pt): 
 					</p>
@@ -81,6 +119,7 @@
 					<p style = "font-size: 150%;"><!-- % inline-->
 						No kto by pomyślał!
 					</p>
+					</div>
 				<hr>
 			</div>
 		</article>

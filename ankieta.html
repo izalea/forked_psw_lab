@@ -19,11 +19,17 @@
 					background-attachment: fixed;
 		 }
 		 
-		 .BORDERS {
+		 .BORDERS1 {
 			border-width: 15px;
 			border-style: solid;
 			border-color: blue;
 		 }
+		  .BORDERS2 {
+			border-width: 3px;
+			border-style: dotted;
+			border-color: green;
+		 }
+		 
 		 
 		</style>		
 	</head>
@@ -40,7 +46,7 @@
 		
 		<form method = "post" action = "http://www.google.com">
 			
-			<fieldset class = "BORDERS">
+			<fieldset class = "BORDERS1">
 			<h3>Podaj swój ulubiony:</h3>
 			<ul>
 				<li><p><label>Kolor:
@@ -54,7 +60,7 @@
 				</label></p></li>
 			</ul>
 			</fieldset>
-			<fieldset>
+			<fieldset class="BORDERS2">
 			<h3>Oceń wygląd naszej strony:</h3>
 			<p><label>Zakres:
 				0<input type = "range"
