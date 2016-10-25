@@ -40,6 +40,18 @@ li.dropdown {
 nav {
 	width: 100%;
 }
+
+a:visited {
+    color: red;
+}
+
+a:link {
+    color: green;
+}
+
+a:active {
+    color: yellow;
+}
 /*
 nav {
 	font-weight:bold;
@@ -78,6 +90,7 @@ a {
 
 .content {
 	margin: auto;
+	position: center;
 	width: 80%;
 	position: center;
 	margin-top: 0px;
@@ -136,11 +149,15 @@ a {
     margin: 3px;
 }
 
-
+input:focus { 
+    background-color: yellow;
+}
 
 .pict {
 	margin: 0px 0px 0px 0px;
 	width: 100%;
+	align-content: center;
+	-webkit-align-content: center;
 }
 
 .pos-rel {
@@ -163,13 +180,13 @@ a {
 .to-left {
 	float: left;
 	width: 50%;
-	height: 40%;
+	height: 200px;
 }
 
-.to-right {
-    float: right;
+.to-left-end {
+    float: left;
 	width: 100%;
-	text-align: right;
+	clear: both;	
 }
 
 .to-top {

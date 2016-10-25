@@ -22,6 +22,21 @@
 				font-style: oblique;
 		 }
 		 
+		input:checked {
+			height: 50px;
+			width: 50px;
+		}
+		input:disabled {
+			background: red;
+		}
+		input:enabled {
+			background: blue;
+		}
+		 input:required {
+			border-style: solid;
+			border-color: orange;
+		}
+	
 		</style>
 	  
 	</head>
@@ -47,7 +62,7 @@
 				
 				<p>
 					<label>Imię:
-						<input id = "name" type = "text" size = "25" maxlength = "30" placeholder = "Jan" autofocus/> (Imię)
+						<input id = "name" disabled= "disabled" type = "text" size = "25" maxlength = "30" placeholder = "Jan" autofocus/> (Imię)
 					</label>
 				</p> 
 				<p>
