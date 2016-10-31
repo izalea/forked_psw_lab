@@ -1,11 +1,11 @@
 body {
-	background-image = url(PizzaLogo.jpg);
 	background-color: #333;
 	background-position: top left;	
 	background-repeat: no-repeat;	
 	background-attachment: fixed;
 	color: white;
 	font-family:arial, sans-serif;
+	z-index = -1;
 }
 
 
@@ -23,14 +23,16 @@ li {
 
 li a, .dropmenu {
     display: inline-block;
+	position: relative;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	text-shadow: 4px, 4px, 6px, blue;
+	z-index: 1;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
 }
 
 li.dropdown {
@@ -40,44 +42,26 @@ li.dropdown {
 nav {
 	width: 100%;
 }
-/*
-nav {
-	font-weight:bold;
-	color:white;
-	border: 2pxsolidroyalblue;
-	text-align: center;
-	width: 10em;
-	background-color: royalblue;
+
+a:visited {
+    color: red;
 }
 
-nav ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+a:link {
+    color: green;
 }
 
-nav:hover ul {
-	display: block;
+a:active {
+    color: yellow;
 }
 
-nav ul li {
-	border-top: 2px solid royalblue;
-	background-color: white;
-	width: 10 em;
-	color: black;	
-}
-
-nav ul li:hover {
-	background-color: powerblue;
-}
-*/
 a {
 	text-decoration: none;
 }
 
 .content {
 	margin: auto;
+	position: center;
 	width: 80%;
 	position: center;
 	margin-top: 0px;
@@ -87,11 +71,10 @@ a {
 
 .content-top {
 	margin-top: 0px;
-	background-image: url(content-top-logo.jpg);
 }
 
 .content-bottom {
-	margin-top: 0px;
+	margin-top: 30px;
 }
 
 .grad {
@@ -99,10 +82,11 @@ a {
   padding: 6px 6px 6px 6px;
   height: 50px;
   line-height: 100%;
-  box-shadow: 2px 2px 3px #666666; 
-  -webkit-box-shadow: 2px 2px 3px #666666;
-  -moz-box-shadow: 2px 2px 3px #666666;
-  background: #333;
+  box-shadow: -10px 2px 8px #666666; 
+  -webkit-box-shadow: -10px 15px 10px #666666;
+  -o-box-shadow: 10px 15px 3px #666666;
+  -moz-box-shadow: 10px 15px 3px #666666;
+  -ms-box-shadow: 10px 2px 3px #666666;  
   background: linear-gradient(top,  #A9A9A9,  #333);/* Standard syntax */
   background: -webkit-linear-gradient(top, #A9A9A9 , #333); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(top, #A9A9A9, #333); /* For Opera 11.1 to 12.0 */
@@ -116,14 +100,17 @@ a {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index = 2;
 }
 
 .dropdown-content a {
+	position: relative;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: left;	
+	z-index: 1;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -137,10 +124,27 @@ a {
     margin: 3px;
 }
 
+.text-decoration {
+	text-shadow: 3px 4px 5px blue;
+}
+
+.div-radius {
+	border: 2px solid black;
+	padding: 30px 20px;
+	background: #D0D15D;
+	border-radius: 25px;	
+}
+
+.ankieta-color {
+	background-color: hsla(170, 50%, 45%, 0.5);	
+	color: black;
+}
 
 .pict {
 	margin: 0px 0px 0px 0px;
 	width: 100%;
+	align-content: center;
+	-webkit-align-content: center;
 }
 
 .pos-rel {
@@ -163,17 +167,31 @@ a {
 .to-left {
 	float: left;
 	width: 50%;
-	height: 40%;
-s}
+	height: 200px;
+}
 
-.to-right {
-    float: right;
+.to-left-end {
+    float: left;
 	width: 100%;
-	text-align: right;
+	clear: both;	
 }
 
 .to-top {
     float: top;
+}
+.in-the-back{
+	z-index = 0;
+}
+.in-the-front{
+	z-index = 1;
+}
+
+.in-the-front-front{
+	z-index = 2;
+}
+
+.in-the-back-back{
+	z-index = -1;
 }
 
 

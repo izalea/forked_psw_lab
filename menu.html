@@ -9,21 +9,49 @@
 		<meta name="description" content="Menu pizzeri. Znajdują się tu wszystkie pizze, które można zamówić w tej pizzeri">
 		<meta name="author" content="Sylwia i Hanna">
 		<link rel="icon" type="image/x-icon" href="pizza_icon.ico">		
+		<link rel="stylesheet" type="text/css" href="css2.css">	
 		<title>Menu</title>
+		<style type = "text/css">
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		table {
+			width: 100%;
+		}
+		td {
+			text-align: center;
+		}
+		#pizzaname {
+			background-color: powderblue;
+		}
+		#pizzadesc {
+			padding: 15px;
+			text-align: left;
+			color: red;
+		}
+
+		</style>
 	</head>
 	
 	<body> 
-		
-		<h1 id = "menu">MENU Z CENAMI</h1>
+		<div id = "grad-linear">
+		<h1>MENU Z CENAMI</h1>
 		<nav><ul>
 			<li><a href = "index.html"><b>Strona główna</b></a></li>
 			<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
 			<li><a href = "ankieta.html"><b>Ankieta!</b></a></li>
 			<li><a href = "menu.html#toppings"><b><em>Dodatkowe składniki</em></b></a></li>
 		</ul></nav>
-		<center><table border = "1" width = "1000">
+		</div>
+						<div class = "background-style">
+				<div class = "content">
+		<table>
+		
 			<caption>
+						
 				Wybierz pizzę jaką tylko chcesz!
+				
 			</caption>
 			<thead>
 				<tr>
@@ -41,41 +69,44 @@
 			<tbody>
 			<!-- pizza1 -->
 				<tr>
-					<th rowspan = "2"><img src="pizza1.jpg" width="100" height="100" alt="Pizza pepperoni"></th>
-					<th width = "156">PEPPERONI</th>
+					<th rowspan = "2" style = "width: 10%"><img src="pizza1.jpg" width="100" height="100" alt="Pizza pepperoni"></th>
+					<th id="pizzaname" style="width: 10% ">PEPPERONI</th>
 					<td rowspan = "2">16,99</td>
 					<td rowspan = "2">23,99</td>
 					<td rowspan = "2">27,99</td>
 				</tr>
 				<tr>
-					<td>Kiełbasa pepperoni, ser mozzarella, ziołowy sos pomidorowy</td>
+					<td id="pizzadesc">Kiełbasa pepperoni, ser mozzarella, ziołowy sos pomidorowy</td>
 				</tr>
 			<!-- pizza2 -->
 				<tr>
 					<th rowspan = "2"><img src="pizza2.jpg" width="100" height="100" alt="Pizza margherita"></th>
-					<th>MARGHERITA</th>
+					<th id="pizzaname">MARGHERITA</th>
 					<td rowspan = "2">14,99</td>
 					<td rowspan = "2">17,99</td>
 					<td rowspan = "2">19,99</td>
 				</tr>
 				<tr>
-					<td>Ser mozzarella, ziołowy sos pomidorowy</td>
+					<td id="pizzadesc">Ser mozzarella, ziołowy sos pomidorowy</td>
 				</tr>
 			<!-- pizza3 -->
 				<tr>
 					<th rowspan = "2"><img src="pizza3.jpg" width="100" height="100" alt="Pizza wielka uczta"></th>
-					<th>WIELKA UCZTA</th>
+					<th id="pizzaname">WIELKA UCZTA</th>
 					<td rowspan = "2">34,99</td>
 					<td rowspan = "2">48,99</td>
 					<td rowspan = "2">53,99</td>
 				</tr>
 				<tr>
-					<td>Wybierz dowolne dwie duże pizze, rolsy lub pieczywo czosnkowe, zestaw 3 sosów, a Pepsi 1 L dostaniesz w prezencie!</td>
+					<td id="pizzadesc">Wybierz dowolne dwie duże pizze, rolsy lub pieczywo czosnkowe, zestaw 3 sosów, a Pepsi 1 L dostaniesz w prezencie!</td>
 				</tr>
 			</tbody>
-		</table></center>
+		</table>
+						</div>
+				</div>
 		
 		<details id="toppings">
+		<div class = "grad-radial">
 			<summary>DODATKOWE SKŁADNIKI</summary>
 			<p>
 				<a href="#menu">Kliknij aby przejść do <em>menu</em></a>
@@ -109,6 +140,7 @@
 					</ul>
 				</li>	
 			</ul>
+		</div>
 		</details>
 	
 	

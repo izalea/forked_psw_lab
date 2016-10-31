@@ -9,22 +9,45 @@
 		<meta name="keywords" content="ankieta, dodatkowa ankieta, pytania, odpowiedz">
 		<meta name="description" content="Dodatkowa aniketa dzięki której poznamy wasze zainteresowania!">
 		<meta name="author" content="Sylwia i Hanna">
-		<link rel="icon" type="image/x-icon" href="pizza_icon.ico">				
+		<link rel="icon" type="image/x-icon" href="pizza_icon.ico">	
+		<link rel="stylesheet" type="text/css" href="style.css">	
+
+		<style type = "text/css">
+      	 .BG_IMG_REPEAT_HORIZONTAL_CENTER {
+					background-image: url(PizzaLogo.png);
+					background-position: center;
+					background-repeat: repeat-x;
+					background-attachment: fixed;
+		 }
+		 
+		 .BORDERS1 {
+			border-width: 15px;
+			border-style: solid;
+			border-color: blue;
+		 }
+		  .BORDERS2 {
+			border-width: 3px;
+			border-style: dotted;
+			border-color: green;
+		 }
+		 
+		 
+		</style>		
 	</head>
 	
 	<!-- content -->
 	
-	<body> 
+	<body class = "BG_IMG_REPEAT_HORIZONTAL_CENTER"> 
 		<nav><ul>
 			<li><a href = "index.html"><b>Strona główna</b></a></li>
 			<li><a href = "menu.html#menu"><b>Menu</b></a></li>
 			<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
 		</ul></nav>
 		<h1>ANKIETA!</h1>
-		
+		<div class = "in-the-front-front ankieta-color">
 		<form method = "post" action = "http://www.google.com">
 			
-			<fieldset>
+			<fieldset class = "BORDERS1">
 			<h3>Podaj swój ulubiony:</h3>
 			<ul>
 				<li><p><label>Kolor:
@@ -38,7 +61,7 @@
 				</label></p></li>
 			</ul>
 			</fieldset>
-			<fieldset>
+			<fieldset class="BORDERS2">
 			<h3>Oceń wygląd naszej strony:</h3>
 			<p><label>Zakres:
 				0<input type = "range"
@@ -69,6 +92,7 @@
 			</p>
 			</fieldset>
 		</form>		
+		</div>
 	
 	
 		<!-- footer -->

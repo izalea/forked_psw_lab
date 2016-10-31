@@ -9,12 +9,42 @@
 		<meta name="keywords" content="kontakt, formularz kontaktowy, kontak pizzeria">
 		<meta name="description" content="Formularz do kontaktu z pizzerią.">
 		<meta name="author" content="Sylwia i Hanna">
-		<link rel="icon" type="image/x-icon" href="pizza_icon.ico">				
+		<link rel="icon" type="image/x-icon" href="pizza_icon.ico">
+			
+		<style type = "text/css">
+       
+		 .BG_IMG_NO_REPEAT_TOP_LEFT {
+					background-image: url(PizzaLogo.png);
+					background-position: top-left;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+		 }
+		 nav > ul {
+				font-style: oblique;
+		 }
+		 
+		input:checked {
+			height: 50px;
+			width: 50px;
+		}
+		input:disabled {
+			background: red;
+		}
+		input:enabled {
+			background: blue;
+		}
+		 input:required {
+			border-style: solid;
+			border-color: orange;
+		}
+	
+		</style>
+	  
 	</head>
 	
 	<!-- content -->
 	
-	<body> 		
+	<body class = "BG_IMG_NO_REPEAT_TOP_LEFT .kontakt-color"> 		
 		<nav><ul>
 			<li><a href = "index.html"><b>Strona główna</b></a></li>
 			<li><a href = "menu.html#menu"><b>Menu</b></a></li>
@@ -33,7 +63,7 @@
 				
 				<p>
 					<label>Imię:
-						<input id = "name" type = "text" size = "25" maxlength = "30" placeholder = "Jan" autofocus/> (Imię)
+						<input id = "name" disabled= "disabled" type = "text" size = "25" maxlength = "30" placeholder = "Jan" autofocus/> (Imię)
 					</label>
 				</p> 
 				<p>

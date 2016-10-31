@@ -1,0 +1,37 @@
+#grad-linear {
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient( red,  yellow);/* Standard syntax */
+    background: -webkit-linear-gradient(botton, red , yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+    background: -ms-linear-gradient(left,  red,  yellow);	
+}
+
+#grad-diagonal {
+	position: relative;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #85ECEC, #097878); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #85ECEC, #097878); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #85ECEC, #097878); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #85ECEC, #097878); /* Standard syntax */
+  padding: 20px;
+}
+
+.grad-radial {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(red 20%, yellow 25%, green 40%); /* Safari 5.1-6.0 */
+  background: -o-radial-gradient(red 20%, yellow 25%, green 60%); /* For Opera 11.6-12.0 */
+  background: -moz-radial-gradient(red 20%, yellow 25%, green 60%); /* For Firefox 3.6-15 */
+  background: radial-gradient(red 20%, yellow 25%, green 60%); /* Standard syntax */
+}
+
+div.background-style {
+	background-image: url("przyprawy.jpg"), url("pomidorek.png");
+	background-position: bottom right, 100% center;
+	background-origin: border-box, content-box;
+	background-repeat: no-repeat, repeat;
+}
+
+div.content {
+	position: relative;
+}
