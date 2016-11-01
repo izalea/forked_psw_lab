@@ -35,3 +35,32 @@ div.background-style {
 div.content {
 	position: relative;
 }
+
+#border-img-repeat{
+    border: 15px solid transparent;
+    padding: 15px;
+    border-image-source: url(border.png);
+    border-image-repeat: repeat;
+    border-image-slice: 30;
+}
+
+#border-img-slice {
+    border: 15px solid transparent;
+    padding: 15px;    
+    border-image: url(border.png);
+    border-image-slice:40 10;
+    border-image-repeat: round;
+}
+
+@font-face {
+    font-family: dancingscript;
+    src: url(DancingScript-Bold.ttf);
+}
+
+.font-face-example {
+    font-family: dancingscript;
+}
+
+.myFont {
+	font-family: 'Itim';
+}
