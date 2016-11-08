@@ -11,6 +11,7 @@ div {
 	padding: 20px;
 }
 
+      
 .anim {
 	position: relative;
 	animation-name: movingImg;
@@ -56,17 +57,17 @@ div {
 	transition: transform 4s;
 }
 
-img:hover {
+#transition img:hover {
 	-webkit-transform: rotate(360deg) scale(2,2);
 	-moz-transform: rotate(360deg) scale(2,2);
 	-o-transform: rotate(360deg) scale(2,2);
 	transform: rotate(360deg) scale(2,2);
 }
 
-.skew {
-	-webkit-animation: skew 3s infinite linear;
-	-moz-animation: skew 3s infinite linear;
-	animation: skew 3s infinite linear;
+.skewingPomodore {
+            -webkit-animation: skew 3s infinite linear;
+            -moz-animation: skew 3s infinite linear;
+            animation: skew 3s infinite linear;
 }
 
 @-webkit-keyframes skew {
@@ -91,4 +92,19 @@ img:hover {
 	50% { -moz-transform: skewX(0deg);  }
 	75% { -moz-transform: skewX(-45deg);  }
 	to { -moz-transform: skewX(0);  }
+}
+
+
+#melt {
+    position: relative;
+    margin: 0 auto;	
+}
+#melt  img {
+	position: absolute;
+	left: 0;
+	-webkit-transition: opacity 4s ease-in-out;
+	transition: opacity 4s ease-in-out;
+ }
+ #melt  img.top:hover{ 
+	opacity:0; 
 }
