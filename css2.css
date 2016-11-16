@@ -1,7 +1,7 @@
 #grad-linear {
     background: red; /* For browsers that do not support gradients */
     background: linear-gradient( red,  yellow);/* Standard syntax */
-    background: -webkit-linear-gradient(botton, red , yellow); /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(bottom, red , yellow); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(top, red, yellow); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
     background: -ms-linear-gradient(left,  red,  yellow);	
@@ -83,7 +83,7 @@ div.content {
 	width: 300px;
 	margin: 10px -10px 10px 0px;
 	padding: 20px 20px 20px 20px;
-	box-shadow: 10px 10px 10px dimgrey;
+	box-shadow: 10px 10px 10px yellow;
 }
 
 .flexbox > div:nth-child(1) {background-color: gray;}
@@ -98,6 +98,23 @@ div.content {
 .flexbox > div:nth-child(1):hover {background-color: #475A5C;}
 .flexbox > div:nth-child(2):hover {background-color: #016674;}
 .flexbox > div:nth-child(3):hover {background-color: #01373E;}
+
+.multicolumns-sztywne {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	-o-column-count: 3;
+	column-count: 3;
+	
+	-webkit-column-gap: 50px;
+	-moz-column-gap: 50px;
+	-o-column-gap: 50px;
+	column-gap: 50px;
+	
+	-webkit-column-rule: 1px outset black;
+	-moz-column-rule: 1px outset black;
+	-o-column-rule: 1px outset black;
+	column-rule: 1px outset black;
+}
 
 .multicolumns {
 	-webkit-column-count: 3;
@@ -116,9 +133,9 @@ div.content {
 	column-rule: 1px outset black;
 }
 
-@media handled and (max-width: 400px), 
-screen and (max-device-width: 400px),
-screen and (max-width: 400px) {
+@media handheld and (max-width: 600px), 
+screen and (max-device-width: 600px),
+screen and (max-width: 600px) {
 	.multicolumns {
 	-webkit-column-count: 1;
 	-moz-column-count: 1;
@@ -127,7 +144,9 @@ screen and (max-width: 400px) {
 	}
 }
 
-@media only screen and (min-width: 401px)
+
+
+@media only screen and (min-width: 601px)
 and (max-width: 800px) {
 	.multicolumns {
 	-webkit-column-count: 2;
@@ -147,8 +166,7 @@ and (max-width: 800px) {
 	}
 }
 
-@media only screen and (min-width: 801px)
-and (max-width: 1300px) {
+@media only screen and (min-width: 801px) {
 	.multicolumns {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
