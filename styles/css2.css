@@ -26,7 +26,7 @@
 }
 
 div.background-style {
-	background-image: url("przyprawy.jpg"), url("pomidorek.png");
+	background-image: url("../img/przyprawy.jpg"), url("../img/pomidorek.png");
 	background-position: bottom right, 100% center;
 	background-origin: border-box, content-box;
 	background-repeat: no-repeat, repeat;
@@ -39,7 +39,7 @@ div.content {
 #border-img-repeat{
     border: 15px solid transparent;
     padding: 15px;
-    border-image-source: url(border.png);
+    border-image-source: url(../img/border.png);
     border-image-repeat: repeat;
     border-image-slice: 30;
 }
@@ -47,14 +47,14 @@ div.content {
 #border-img-slice {
     border: 15px solid transparent;
     padding: 15px;    
-    border-image: url(border.png);
+    border-image: url(../img/border.png);
     border-image-slice:40 10;
     border-image-repeat: round;
 }
 
 @font-face {
     font-family: dancingscript;
-    src: url(DancingScript-Bold.ttf);
+    src: url(../DancingScript-Bold.ttf);
 }
 
 .font-face-example {
