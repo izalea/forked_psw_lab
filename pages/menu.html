@@ -33,9 +33,24 @@
 
 		</style>
 		<script type = "text/javascript">
-		function start()
-		{}
-			window.addEventListener("load", start, false);
+		
+			var iconImg;
+			var pictures = [ "banner", "banner2", "carbonara", "europejska",
+			"farmerska", "halfer", "hawajska", "margherita", "miesna",
+			"peperoni", "supersupreme", "texas", "wege" ];
+			var descriptions = [ "obrazek pizzy banner", "obrazek pizzy banner2", "obrazek pizzy carbonara", "obrazek pizzy europejska",
+			"obrazek pizzy farmerska", "obrazek pizzy halfer", "obrazek pizzy hawajska", "obrazek pizzy margherita", "obrazek pizzy miesna",
+			"obrazek pizzy peperoni", "obrazek pizzy supersupreme", "obrazek pizzy texas", "obrazek pizzy wege" ];
+			
+			function pickImage()
+			{
+			   iconImg = document.getElementById( "randomImage" );
+			   var index = Math.floor( Math.random() * pictures.length );
+			   iconImg.setAttribute( "src", "../img/" + pictures[ index ] + ".jpg" );
+			   iconImg.setAttribute( "alt", descriptions[ index ] );
+			} // end function pickImage
+			
+			window.addEventListener("load", pickImage, false);
 		</script>
 	</head>
 	
@@ -61,7 +76,7 @@
 			<thead>
 				<tr>
 					<th rowspan = "2" colspan = "2">
-						<img src="../img/pizza.jpg" width="256" height="160" alt="Logo pizza"></th>
+						<img id="randomImage" src="../img/pizza.jpg" width="256" height="160" alt="Logo pizza"></th>
 					<th colspan = "3">WIELKOŚĆ</th>
 				</tr>
 				<tr>
