@@ -1,0 +1,186 @@
+#grad-linear {
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient( red,  yellow);/* Standard syntax */
+    background: -webkit-linear-gradient(bottom, red , yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+    background: -ms-linear-gradient(left,  red,  yellow);	
+}
+
+#grad-diagonal {
+	position: relative;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #85ECEC, #097878); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #85ECEC, #097878); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #85ECEC, #097878); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #85ECEC, #097878); /* Standard syntax */
+  padding: 20px;
+}
+
+.grad-radial {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(red 20%, yellow 25%, green 40%); /* Safari 5.1-6.0 */
+  background: -o-radial-gradient(red 20%, yellow 25%, green 60%); /* For Opera 11.6-12.0 */
+  background: -moz-radial-gradient(red 20%, yellow 25%, green 60%); /* For Firefox 3.6-15 */
+  background: radial-gradient(red 20%, yellow 25%, green 60%); /* Standard syntax */
+}
+
+div.background-style {
+	background-image: url("przyprawy.jpg"), url("pomidorek.png");
+	background-position: bottom right, 100% center;
+	background-origin: border-box, content-box;
+	background-repeat: no-repeat, repeat;
+}
+
+div.content {
+	position: relative;
+}
+
+#border-img-repeat{
+    border: 15px solid transparent;
+    padding: 15px;
+    border-image-source: url(border.png);
+    border-image-repeat: repeat;
+    border-image-slice: 30;
+}
+
+#border-img-slice {
+    border: 15px solid transparent;
+    padding: 15px;    
+    border-image: url(border.png);
+    border-image-slice:40 10;
+    border-image-repeat: round;
+}
+
+@font-face {
+    font-family: dancingscript;
+    src: url(DancingScript-Bold.ttf);
+}
+
+.font-face-example {
+    font-family: dancingscript;
+}
+
+.myFont {
+	font-family: 'Itim';
+}
+
+.flexbox {
+	width: 1050px;
+	height: 450px;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-orient: horizontal;
+	box-orient: horizontal;	
+}
+
+.flexbox > div {	
+	-webkit-transition: 1s ease-out;
+	transition: 1s ease-out;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 2px solid white;
+	width: 300px;
+	margin: 10px -10px 10px 0px;
+	padding: 20px 20px 20px 20px;
+	box-shadow: 10px 10px 10px yellow;
+}
+
+.flexbox > div:nth-child(1) {background-color: gray;}
+.flexbox > div:nth-child(2) {background-color: gray;}
+.flexbox > div:nth-child(3) {background-color: gray;}
+
+.flexbox > div:hover {
+	width: 400px;
+	font-weight: bold;
+}
+
+.flexbox > div:nth-child(1):hover {background-color: #475A5C;}
+.flexbox > div:nth-child(2):hover {background-color: #016674;}
+.flexbox > div:nth-child(3):hover {background-color: #01373E;}
+
+.multicolumns-sztywne {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	-o-column-count: 3;
+	column-count: 3;
+	
+	-webkit-column-gap: 50px;
+	-moz-column-gap: 50px;
+	-o-column-gap: 50px;
+	column-gap: 50px;
+	
+	-webkit-column-rule: 1px outset black;
+	-moz-column-rule: 1px outset black;
+	-o-column-rule: 1px outset black;
+	column-rule: 1px outset black;
+}
+
+.multicolumns {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	-o-column-count: 3;
+	column-count: 3;
+	
+	-webkit-column-gap: 50px;
+	-moz-column-gap: 50px;
+	-o-column-gap: 50px;
+	column-gap: 50px;
+	
+	-webkit-column-rule: 1px outset black;
+	-moz-column-rule: 1px outset black;
+	-o-column-rule: 1px outset black;
+	column-rule: 1px outset black;
+}
+
+@media handheld and (max-width: 600px), 
+screen and (max-device-width: 600px),
+screen and (max-width: 600px) {
+	.multicolumns {
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	-o-column-count: 1;
+	column-count: 1;
+	}
+}
+
+
+
+@media only screen and (min-width: 601px)
+and (max-width: 800px) {
+	.multicolumns {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	column-count: 2;
+	
+	-webkit-column-gap: 30px;
+	-moz-column-gap: 30px;
+	-o-column-gap: 30px;
+	column-gap: 30px;
+	
+	-webkit-column-rule: 1px outset black;
+	-moz-column-rule: 1px outset black;
+	-o-column-rule: 1px outset black;
+	column-rule: 1px outset black;	
+	}
+}
+
+@media only screen and (min-width: 801px) {
+	.multicolumns {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	-o-column-count: 3;
+	column-count: 3;
+	
+	-webkit-column-gap: 30px;
+	-moz-column-gap: 30px;
+	-o-column-gap: 30px;
+	column-gap: 30px;
+	
+	-webkit-column-rule: 1px outset black;
+	-moz-column-rule: 1px outset black;
+	-o-column-rule: 1px outset black;
+	column-rule: 1px outset black;	
+	}
+}
