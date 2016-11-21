@@ -65,7 +65,7 @@ a {
 	position: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	background-image: url(background.png);
+	background-image: url(../img/background.png);
 }
 
 .content-top {
