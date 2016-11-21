@@ -34,7 +34,7 @@
 		</style>
 		<script type = "text/javascript">
 		
-			var iconImg;
+			var randomImg;
 			var pictures = [ "banner", "banner2", "carbonara", "europejska",
 			"farmerska", "halfer", "hawajska", "margherita", "miesna",
 			"peperoni", "supersupreme", "texas", "wege" ];
@@ -44,10 +44,10 @@
 			
 			function pickImage()
 			{
-			   iconImg = document.getElementById( "randomImage" );
+			   randomImg = document.getElementById( "randomImage" );
 			   var index = Math.floor( Math.random() * pictures.length );
-			   iconImg.setAttribute( "src", "../img/" + pictures[ index ] + ".jpg" );
-			   iconImg.setAttribute( "alt", descriptions[ index ] );
+			   randomImg.setAttribute( "src", "../img/" + pictures[ index ] + ".jpg" );
+			   randomImg.setAttribute( "alt", descriptions[ index ] );
 			} // end function pickImage
 			
 			window.addEventListener("load", pickImage, false);
@@ -56,13 +56,14 @@
 	
 	<body> 
 		<div id = "grad-linear">
-		<h1>MENU Z CENAMI</h1>
-		<nav><ul>
-			<li><a href = "../index.html"><b>Strona główna</b></a></li>
-			<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
-			<li><a href = "ankieta.html"><b>Ankieta!</b></a></li>
-			<li><a href = "menu.html#toppings"><b><em>Dodatkowe składniki</em></b></a></li>
-		</ul></nav>
+			<h1>MENU Z CENAMI</h1>
+			<nav><ul>
+				<li><a href = "../index.html"><b>Strona główna</b></a></li>
+				<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
+				<li><a href = "ankieta.html"><b>Ankieta!</b></a></li>
+				<li><a href = "menu.html#toppings"><b><em>Dodatkowe składniki</em></b></a></li>
+			</ul></nav>
+		
 		</div>
 		<div class = "background-style">
 		<div class = "content">

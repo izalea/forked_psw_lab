@@ -29,3 +29,34 @@ function alertWindow () {
 	wprowadzDane();
 	alertFunkcja();
 }
+
+function pickNumber() {
+	var choice; 
+	var outputDiv = document.getElementById("result");
+	var output = "<h1>Wybrałeś: ";
+	choice = window.prompt( "Wybierz numer 1,2,3,4 lub 5");
+	switch ( choice )
+         {
+            case "1":
+               output += "jeden";
+               break;
+            case "2":
+               output += "dwa";
+               break;
+            case "3":
+               output += "trzy";
+               break;
+            case "4":
+               output += "cztery";
+               break;
+            case "5":
+               output += "pięć";
+               break;
+            default:
+               output += "niepoprwaną wartość... Wybierz 1,2,3,4 lub 5!";          
+               break;
+         } //end switch
+		 
+	output+="</h1>";
+	outputDiv.innerHTML = output;
+}
