@@ -11,7 +11,7 @@
 		<meta name="author" content="Sylwia i Hanna">
 		<link rel="icon" type="image/x-icon" href="../img/pizza_icon.ico">	
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">	
-
+		<script src="../scripts/javascrypt.js"></script>
 		<style type = "text/css">
       	 .BG_IMG_REPEAT_HORIZONTAL_CENTER {
 					background-image: url(../img/PizzaLogo.png);
@@ -93,8 +93,14 @@
 			</fieldset>
 		</form>		
 		</div>
-	
-	
+		<div class = "in-the-front-front ankieta-color">
+			<button type = "button" onclick="pickNumber()">Wybierz numer</button>
+			<button type = "button" onclick="displaySquare()">Podaj kwadrat liczby</button>
+			<div id="result">
+				<h1>Wybierz!</h1>
+			</div>
+		</div>
+		
 		<!-- footer -->
 		<footer>
 			<h6>&copy; 2016 by Hanna & Sylwia <br> Inc. All Rights Reserved.</h6>
