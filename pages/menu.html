@@ -34,6 +34,8 @@
 		</style>
 		<script type = "text/javascript">
 		
+			
+			
 			var randomImg;
 			var pictures = [ "banner", "banner2", "carbonara", "europejska",
 			"farmerska", "halfer", "hawajska", "margherita", "miesna",
@@ -49,8 +51,26 @@
 			   randomImg.setAttribute( "src", "../img/" + pictures[ index ] + ".jpg" );
 			   randomImg.setAttribute( "alt", descriptions[ index ] );
 			} // end function pickImage
+			function loops(){
+				var counter = 1; // initialization
+				var outDIV = document.getElementById("loopsDivOut");
+				var out = "<center>";
+				while ( counter <= 4) // repetition condition
+				{	
+					out+= "<p style = 'font-size: " + counter + "ex'>PIZZA</p>";
+					++counter; // increment
+				} //end while
+				for (var i=3;i >= 1;i--) 
+				{	
+					out+= "<p style = 'font-size: " + i + "ex'>PIZZA</p>";
+					
+				} //end for
+				out+="</center>";
+				outDIV.innerHTML = out;
+			}
 			
 			window.addEventListener("load", pickImage, false);
+			window.addEventListener("load", loops, false);
 		</script>
 	</head>
 	
@@ -63,8 +83,11 @@
 				<li><a href = "ankieta.html"><b>Ankieta!</b></a></li>
 				<li><a href = "menu.html#toppings"><b><em>Dodatkowe składniki</em></b></a></li>
 			</ul></nav>
-		
+			<div id="loopsDivOut">
+				NADA
+			</div>
 		</div>
+		
 		<div class = "background-style">
 		<div class = "content">
 		<table>

@@ -60,3 +60,17 @@ function pickNumber() {
 	output+="</h1>";
 	outputDiv.innerHTML = output;
 }
+
+
+
+function displaySquare(){
+	var choice;
+	do{
+		choice = window.prompt("Podaj cyfrę którą chcesz podnieść do kwadratu lub podaj wpisz literę aby zakończyć")
+		var number = parseFloat(choice);
+		if(!isNaN(number))
+			window.alert("Kwadrat " + number + " to " + Math.pow(number,2));
+	}
+	while(!isNaN(number))
+	
+}
