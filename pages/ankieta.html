@@ -12,6 +12,7 @@
 		<link rel="icon" type="image/x-icon" href="../img/pizza_icon.ico">	
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">	
 		<script src="../scripts/javascrypt.js"></script>
+			<script src="../scripts/dom5.js"></script>
 		<style type = "text/css">
       	 .BG_IMG_REPEAT_HORIZONTAL_CENTER {
 					background-image: url(../img/PizzaLogo.png);
@@ -45,26 +46,21 @@
 		</ul></nav>
 		<h1>ANKIETA!</h1>
 		<div class = "in-the-front-front ankieta-color">
-		<form method = "post" action = "http://www.google.com">
+		<form id = "theForm" method = "post" action = "">
 			
 			<fieldset class = "BORDERS1">
-			<h3>Podaj swój ulubiony:</h3>
-			<ul>
-				<li><p><label>Kolor:
-					<input type = "color" autofocus />
-						(Kliknij i wybierz!)
-				</label></p></li>
-				
-				<li><p><label>Miesiąc:
-					<input type = "month"/>
-						(yyyy-mm)
-				</label></p></li>
-			</ul>
+				<h3>Podaj swój ulubiony:</h3>
+				<p><label for = "color">Kolor:</label>
+					<input id = "color" type = "color" autofocus /></p>
+				<p><label for = "month">Miesiąc:</label>
+					<input id = "month" type = "month"/>
+				</p>
+				<p id = "helpText1"></p>
 			</fieldset>
 			<fieldset class="BORDERS2">
 			<h3>Oceń wygląd naszej strony:</h3>
 			<p><label>Zakres:
-				0<input type = "range"
+				0<input id = "range" type = "range"
 						min = "0"
 						max = "10"
 						value = "5"
@@ -73,23 +69,22 @@
 			
 			<h3>Wyniki oceny:</h3>	
 			<!-- meter element -->			
-			0   <meter min = "0" max = "100" value = "89"></meter>100
-			<p>
-				89% klientów oceniaja wygląd naszej strony na 10
-			</p>		
+			0   <meter id = "meter" min = "0" max = "100" value = "89"></meter>100		
 			
 			
 			<h3>Podaj swoją stronę:</h3>
 			<p><label>URL:
-				<input type = "url" 
+				<input id = "url" type = "url" 
 						placeholder = "http://www.domain.com" />
 						(http://www.domain.com)
 			</label></p>
-	
-			<p>
-				<input type = "submit" value = "Wyślij" />
-				<input type = "reset" value = "Wyczyść" />
+			<p id = "submitReset">
+				<input id  = "submit" type = "submit" value = "Wyślij" />
+				<input id = "reset" type = "reset" value = "Wyczyść" />
 			</p>
+			
+			<p id = "helpText2"></p>
+			
 			</fieldset>
 		</form>		
 		</div>
