@@ -54,7 +54,7 @@ function pickNumber() {
                break;
             default:
                output += "niepoprwaną wartość... Wybierz 1,2,3,4 lub 5!";          
-               break;
+            
          } //end switch
 		 
 	output+="</h1>";
@@ -65,12 +65,12 @@ function pickNumber() {
 
 function displaySquare(){
 	var choice;
+	var number;
 	do{
-		choice = window.prompt("Podaj cyfrę którą chcesz podnieść do kwadratu lub podaj wpisz literę aby zakończyć")
-		var number = parseFloat(choice);
-		if(!isNaN(number))
+		choice = window.prompt("Podaj cyfrę którą chcesz podnieść do kwadratu lub podaj wpisz literę aby zakończyć");
+		number = parseFloat(choice);
+		if(!isNaN(number)){
 			window.alert("Kwadrat " + number + " to " + Math.pow(number,2));
-	}
-	while(!isNaN(number))
-	
+		}
+	}while(!isNaN(number));
 }
