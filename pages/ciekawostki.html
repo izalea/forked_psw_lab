@@ -12,6 +12,7 @@
 		<meta name="author" content="Sylwia i Hanna">
 		<link rel="icon" type="image/x-icon" href="../img/pizza_icon.ico">		
 		<script src="../scripts/dom1.js"></script>
+		<script src="../scripts/dom3.js"></script>
 		 <style type = "text/css">
         
 		
@@ -93,8 +94,31 @@
 				</ul>	
 			</nav>			
 		</section>
-		<section id="jsDOM1">
-			
+		<section id="jsDOM1"></section>
+		<section id="jsDOM3" style = "margin-left: 10em;">
+			<h2>Wybierz jak ma wyglądać strona:</h2>
+			<ul>
+				<li><label for = "backColorChange">Wybierz kolor tła:</label>
+					<input id = "backColorChange" type = "color" />
+				</li>
+				<li><label for = "fontColorChange">Wybierz kolor tekstu:</label>
+					<input id = "fontColorChange" type = "color"  />
+				</li>
+				<li>
+					<label for = "fontSelect">Wybierz czcionkę:</label>
+					<select id="fontSelect" onchange="changeSelectedFont(this)">
+						<option value="Arial">Arial</option>
+						<option value="Times New Roman">Times New Roman</option>
+						<option value="Courier">Courier</option>
+						<option value="Avant Garde">Avant Garde</option>
+						<option value="Tahoma">Tahoma</option>
+						<option value="Georgia">Georgia</option>
+						<option value="Comic Sans MS">Comic Sans MS</option>
+						<option value="Impact">Impact</option>
+					</select>
+				</li>
+			</ul>
+			<button type="button" onclick="changeProperties()">Zatwierdź</button>
 		</section>
 		<section id="facts">
 			<article>
