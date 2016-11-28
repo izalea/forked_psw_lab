@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="../styles/css2.css">	
 		<title>Menu</title>
 		<style type = "text/css">
+		
 		table, th, td {
 			border: 1px solid black;
 			border-collapse: collapse;
@@ -33,6 +34,7 @@
 
 		</style>
 		<script type = "text/javascript">
+		
 		
 			
 			
@@ -73,17 +75,29 @@
 			window.addEventListener("load", pickImage, false);
 			window.addEventListener("load", loops, false);
 		</script>
+		<script src="../scripts/dom2.js"></script>
 	</head>
 	
 	<body> 
 		<div id = "grad-linear">
+		<div>	
+            <a href = "../index.html"><b>Strona główna</b></a>		
+			<a href="menu.html#menu"><b>Menu</b></a>
+			<a href = "kontakt.html"><b>Kontakt</b></a>
+			<a href = "ankieta.html"><b>Ankieta</b></a>
+			<a href = "historia.html"><b>Historia pizzy</b></a>
+			<a href = "animation.html"><b>Animacja</b></a>
+			<a href = "multikolumn.html"><b>Multikolumn</b></a>
+			<a href = "ciekawostki.html"><b>Ciekawostki</b></a>
+		</div>
 			<h1>MENU Z CENAMI</h1>
-			<nav><ul>
+<!--			<nav><ul>
 				<li><a href = "../index.html"><b>Strona główna</b></a></li>
 				<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
 				<li><a href = "ankieta.html"><b>Ankieta!</b></a></li>
 				<li><a href = "menu.html#toppings"><b><em>Dodatkowe składniki</em></b></a></li>
 			</ul></nav>
+-->
 			<div id="loopsDivOut">
 				NADA
 			</div>
@@ -136,7 +150,7 @@
 				</tr>
 			<!-- pizza3 -->
 				<tr>
-					<th rowspan = "2"><img src="../img/pizza3.jpg" width="100" height="100" alt="Pizza wielka uczta"></th>
+					<th rowspan = "2"><img id = "myImg" alt = "pizza" src="../img/pizza3.jpg" width="100" height="100" alt="Pizza wielka uczta"></th>
 					<th id="pizzaname">WIELKA UCZTA</th>
 					<td rowspan = "2">34,99</td>
 					<td rowspan = "2">48,99</td>
@@ -186,8 +200,13 @@
 				</li>	
 			</ul>
 		</div>
+
+		
 		</details>
-	
+				<p>Liczba obrazów na stronie:</p>
+				<div id="liczbaObrazow"></div>
+				<p>Opis 3 obrazka:</p>
+				<div id="opis"></div>					
 	
 	
 		<!-- footer -->
