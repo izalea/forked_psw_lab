@@ -193,4 +193,31 @@ a {
 	z-index = -1;
 }
 
+.largeFont{
+	font-size: 20px;
+}
 
+.smallFont{
+	font-size: 15px;
+}
+
+.altt {
+	border: 5px solid red;
+	padding: 30px 20px;
+	background: #D0D15D;
+	border-radius: 25px;	
+}
+
+.ctrll {
+	border: 2px solid black;
+	padding: 30px 20px;
+	background: yellow;
+	border-radius: 25px;	
+}
+
+.shiftt {
+	border: 2px solid black;
+	padding: 30px 20px;
+	background: #D0D15D;
+	border-radius: 45px;	
+}

@@ -10,8 +10,9 @@
 		<meta name="description" content="Formularz do kontaktu z pizzerią.">
 		<meta name="author" content="Sylwia i Hanna">
 		<link rel="icon" type="image/x-icon" href="../img/pizza_icon.ico">
-			
 		<style type = "text/css">
+		<script src="scripts/dom2.js"></script>
+		
        
 		 .BG_IMG_NO_REPEAT_TOP_LEFT {
 					background-image: url(../img/PizzaLogo.png);
@@ -54,9 +55,7 @@
 		<button id = "buttonListener" type = "button" onclick="eventButton()">Event Listener For Button</button>
 		
 		<form method = "post" action = "http://www.google.com" autocomplete = "on">
-
-			<fieldset>
-				
+			<fieldset>				
 				<legend>Informacja kontaktowa</legend>
 				<h3><b><mark>Tel.: 111-222-333</mark></b></h3>
 				<h3><b><mark>111-222-444</mark></b></h3>
@@ -68,10 +67,10 @@
 						<input id = "name" disabled= "disabled" type = "text" size = "25" maxlength = "30" placeholder = "Jan" autofocus/> (Imię)
 					</label>
 				</p> 
-				<p>
-					<label>
-						Nazwisko:<input id = "surname" type = "text" size = "25" maxlength = "50" placeholder = "Kowalski" required/> (Nazwisko, wymagane)
-					</label>
+				<p>				
+						<label>
+							Nazwisko:<input id = "surname" type = "text" size = "25" maxlength = "50" placeholder = "Kowalski" required/> (Nazwisko, wymagane)
+						</label>	
 				</p>
 				<p>
 					<label>Email:
