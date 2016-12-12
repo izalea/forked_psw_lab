@@ -17,24 +17,27 @@
             $_POST["fav_url"]))
          {
             print( "<p class = 'error'>Invalid url</p>
-               <p>A valid url must be in the form 
-               http://www.yourtextornumbershereatleast3.com/</p><p>Click the Back button, 
-               enter a valid phone number and resubmit.</p>
-               <p>Thank You.</p></body></html>" );
+               <p>Poprawny url musi byc w formie
+               http://www.yourtextornumbershereatleast3.com/</p><p> 
+              wpisz poprawny url i wyslij jeszcze raz.</p>
+               <p>Dzieki.</p></body></html>" );
             die(); // terminate script execution
          }
-      ?><!-- end PHP script 
-      <p>Hi <?php print( $_POST["fname"] ); ?>. Thank you for 
-         completing the survey. You have been added to the 
-         <?php print( $_POST["book"] ); ?> mailing list.</p>
-      <p class = "head">The following information has been saved 
-         in our database:</p>
-      <p>Name: <?php print( $_POST["fname"] ); 
-         print( $_POST["lname"] ); ?></p>
-      <p>Email: <?php print( $_POST["email"] ); ?></p>
-      <p>Phone: <?php print( $_POST["phone"] ); ?></p>
-      <p>OS: <?php print( $_POST["os"] ); ?></p>-->
-      <p class = "head">This is only a sample form.       
-         You have not been added to a mailing list.</p>   
+      ?>
+	  <p class = "head">Super - podales prawidlowy url</p>
+	  <?php
+		$search = $_POST["longtxt"];
+		$ending = $_POST["ending"];
+         print( "<p>Slowa konczace sie na $ending: " );
+
+         while ( preg_match( "/\b([a-zA-Z]*$ending)\b/i", $search, $match ) )
+         {
+            print( $match[ 1 ] . " " );
+
+            $search = preg_replace( "/" . $match[ 1 ] . "/", "", $search );
+         } 
+
+         print( "</p>" );
+	?>
    </body>
 </html>
