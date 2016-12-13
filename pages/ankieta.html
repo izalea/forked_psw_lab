@@ -46,41 +46,55 @@
 		</ul></nav>
 		<h1>ANKIETA!</h1>
 		<div class = "in-the-front-front ankieta-color">
-		<form id = "theForm" method = "post" action = "">
+		
+		 <!-- post form data to ankieta.php -->
+		<form id = "theForm" method = "post" action = "ankieta.php">
 			
+			<!--favourites-->
 			<fieldset class = "BORDERS1">
 				<h3>Podaj swój ulubiony:</h3>
-				<p><label for = "color">Kolor:</label>
-					<input id = "color" type = "color" autofocus /></p>
-				<p><label for = "month">Miesiąc:</label>
-					<input id = "month" type = "month"/>
-				</p>
+				<div><label for = "color">Kolor:</label>
+					<input id = "color" type = "color" autofocus /></div>
+				<div><label for = "month">Miesiąc:</label>
+					<input id = "month" type = "month"/></div>
 				<p id = "helpText1"></p>
 			</fieldset>
-			<fieldset class="BORDERS2">
-			<h3>Oceń wygląd naszej strony:</h3>
-			<p><label>Zakres:
-				0<input id = "range" type = "range"
-						min = "0"
-						max = "10"
-						value = "5"
-				/>10
-			</label></p>
 			
+			<fieldset class="BORDERS2">
+				<h3>Oceń wygląd naszej strony:</h3>
+				<div><label>Zakres:
+					0<input id = "range" type = "range"
+							min = "0"
+							max = "10"
+							value = "5"
+					/>10
+				</label></div>
+				
 			<h3>Wyniki oceny:</h3>	
 			<!-- meter element -->			
 			0   <meter id = "meter" min = "0" max = "100" value = "89"></meter>100		
 			
 			
 			<h3>Podaj swoją stronę:</h3>
-			<p><label>URL:
-				<input id = "url" type = "url" 
+			<div><label>URL:
+				<input id = "url" type = "text" name = "fav_url"
 						placeholder = "http://www.domain.com" />
-						(http://www.domain.com)
-			</label></p>
+			</label></div>
+			
+			<h3>Podaj dlugi tekst:</h3>
+			<div><label>Dlugi tekst:
+				<input id = "longtxt" type = "text" name = "longtxt"
+						placeholder = "Tinkle, Tinkle little car How I wonder what you are. Leaking oil every day..." />
+			</label></div>
+			
+			<h3>Podaj koncowke po ktorej chcesz wyszukac slowa:</h3>
+			<div><label>Koncowka:
+				<input id = "ending" type = "text" name = "ending"
+						placeholder = "le" />
+			</label></div>
+			
 			<p id = "submitReset">
-				<input id  = "submit" type = "submit" value = "Wyślij" />
-				<input id = "reset" type = "reset" value = "Wyczyść" />
+				<input id  = "submit" type = "submit" name = "submit" value = "Wyślij" />
 			</p>
 			
 			<p id = "helpText2"></p>
