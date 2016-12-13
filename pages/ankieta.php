@@ -26,20 +26,20 @@
             die();
          }
 		 ?>
-	  <p class = "head">Super - podales prawidlowy url</p>
+	  <p class = "head">Super - podales prawidlowy url</p><br>
 	  <?php
 		
 		// adress		
 		 print("<p> Adres IP odwiedziajacego: ");
 		print($_SERVER['REMOTE_ADDR']);
-		print("</p>");
+		print("</p><br>");
 		
 		
 		//regular expressions
         $search = $_POST["longtxt"];
 		$ending = $_POST["ending"];
-		print("<p>$search</p>");
-         print( "<p>Slowa konczace sie na $ending: " );
+		print("<p>Nasz tekst</p><p class = "head">$search</p>");
+         print( "<div>Slowa konczace sie na<p class = "head"> $ending: </p>" );
 
          while ( preg_match( "/\b([a-zA-Z]*$ending)\b/i", $search, $match ) )
          {
@@ -48,7 +48,7 @@
             $search = preg_replace( "/" . $match[ 1 ] . "/", "", $search );
          } 
 
-         print( "</p>" );
+         print( "</div><br>" );
 		 
 		 //foreach and string operations
         $myDictionary = array(  
@@ -62,15 +62,16 @@
 
          // print each element’s name and value
          foreach ( $myDictionary as $engKey => $plVal ){
-            print( "<p>Angielskie slowo: '$engKey' po polsku znaczy '$plVal'</p>" );
+            print( "<p>Angielskie slowo: <b>'$engKey'</b> po polsku znaczy <b>'$plVal'</b></p>" );
 			 
 			if ( strcmp( $engKey, $plVal ) < 0 )
-               print( "<p> Uzywam strcmp" . $engKey . " bedzie wczesniej niz " . $plVal);
+               print( "<p> strcmp " . $engKey . " bedzie <b>wczesniej</b> niz " . $plVal);
             elseif ( $engKey > $plVal ) 
-               print( "<p> Uzywam relacyjnego >" . $engKey . " bedzie pozniej niz " . $plVal);
+               print( "<p> > " . $engKey . " bedzie <b>pozniej</b> niz " . $plVal);
             else 
                print( "<p>" . $engKey . " jest takie same jak " . $plVal );
 			
+			print("<br>");
 		 }
       ?>
    </body>
