@@ -38,8 +38,8 @@
 		//regular expressions
         $search = $_POST["longtxt"];
 		$ending = $_POST["ending"];
-		print("<p>Nasz tekst</p><p class = "head">$search</p>");
-         print( "<div>Slowa konczace sie na<p class = "head"> $ending: </p>" );
+		print("<p>Nasz tekst '$search'</p>");
+         print( "<div>Slowa konczace sie na '$ending': </p>" );
 
          while ( preg_match( "/\b([a-zA-Z]*$ending)\b/i", $search, $match ) )
          {
