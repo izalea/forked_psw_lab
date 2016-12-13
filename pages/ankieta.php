@@ -10,10 +10,22 @@
    </head>
    <body>
       <?php
-		print("<p> Adres IP odwiedziajacego: ");
+		
+		if (!preg_match( "/^http:\/\/www.[a-zA-Z0-9]{3,}.com\/$/", 
+            $_POST["fav_url"]))
+         {
+            print( "<p class = 'error'>Invalid url</p>
+               <p>Poprawny url musi byc w formie
+               http://www.yourtextornumbershereatleast3.com/</p><p> 
+              wpisz poprawny url i wyslij jeszcze raz.</p>
+               <p>Dzieki.</p></body></html>" );
+            die("BYE");
+         }
+		 ?>
+	  <p class = "head">Super - podales prawidlowy url</p>
+	  <?php
+		 print("<p> Adres IP odwiedziajacego: ");
 		print($_SERVER['REMOTE_ADDR']);
-		print("/nlub z proxy/n")
-		print($_SERVER['HTTP_X_FORWARDED_FOR']);
 		print("</p>");
 		
         $search = $_POST["longtxt"];
@@ -30,17 +42,6 @@
 
          print( "</p>" );
         
-		if (!preg_match( "/^http:\/\/www.[a-zA-Z0-9]{3,}.com\/$/", 
-            $_POST["fav_url"]))
-         {
-            print( "<p class = 'error'>Invalid url</p>
-               <p>Poprawny url musi byc w formie
-               http://www.yourtextornumbershereatleast3.com/</p><p> 
-              wpisz poprawny url i wyslij jeszcze raz.</p>
-               <p>Dzieki.</p></body></html>" );
-            die("BYE");
-         }
       ?>
-	  <p class = "head">Super - podales prawidlowy url</p>
    </body>
 </html>
