@@ -72,7 +72,20 @@
                print( "<p>" . $engKey . " jest takie same jak " . $plVal );
 			
 			print("<br>");
+		
 		 }
+		 
+		 $myszki[ "Razer" ] = 99;
+         $myszki[ "Logitech" ] = 67;
+         $myszki[ "Microsoft" ] = 13;
+
+		print("<br>");
+         for ( reset( $myszki ); $mysz = key( $myszki ); next( $myszki ) )
+            print( "<p>$mysz is $myszki[$mysz]</p>" );
+		print("<br>");
+		print("<p>Twoje ulubione zwierzatko to:</p>");
+		print( $_POST["fav_animal"] );
+		print("<br>");
       ?>
    </body>
 </html>
