@@ -82,10 +82,14 @@
 		print("<br>");
          for ( reset( $myszki ); $mysz = key( $myszki ); next( $myszki ) )
             print( "<p>$mysz is $myszki[$mysz]</p>" );
+		
 		print("<br>");
 		print("<p>Twoje ulubione zwierzatko to:</p>");
 		print( $_POST["fav_animal"] );
 		print("<br>");
+		
+		print("<p>najlepsza myszka:</p>");
+		print( $_POST["myszy"] );
       ?>
    </body>
 </html>
