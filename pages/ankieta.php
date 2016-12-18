@@ -60,7 +60,7 @@
             "November"  => "Listopad","December" => "Grudzien",
 			"Zebra"		=>	"Zebra");
 
-         // print each element’s name and value
+         
          foreach ( $myDictionary as $engKey => $plVal ){
             print( "<p>Angielskie slowo: <b>'$engKey'</b> po polsku znaczy <b>'$plVal'</b></p>" );
 			 
@@ -72,7 +72,24 @@
                print( "<p>" . $engKey . " jest takie same jak " . $plVal );
 			
 			print("<br>");
+		
 		 }
+		 
+		 $myszki[ "Razer" ] = 99;
+         $myszki[ "Logitech" ] = 67;
+         $myszki[ "Microsoft" ] = 13;
+
+		print("<br>");
+         for ( reset( $myszki ); $mysz = key( $myszki ); next( $myszki ) )
+            print( "<p>$mysz is $myszki[$mysz]</p>" );
+		
+		print("<br>");
+		print("<p>Twoje ulubione zwierzatko to:</p>");
+		print( $_POST["fav_animal"] );
+		print("<br>");
+		
+		print("<p>najlepsza myszka:</p>");
+		print( $_POST["myszy"] );
       ?>
    </body>
 </html>
