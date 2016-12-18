@@ -17,7 +17,7 @@
 	
 	<body> 		
 		<nav><ul>
-			<li><a href = "../index.html"><b>Strona główna</b></a></li>
+			<li><a href = "../index.php"><b>Strona główna</b></a></li>
 			<li><a href = "menu.html#menu"><b>Menu</b></a></li>
 			<li><a href = "ankieta.html"><b>Ankieta!</b></a></li>			
 		</ul></nav>
