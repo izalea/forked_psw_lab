@@ -60,7 +60,7 @@
             "November"  => "Listopad","December" => "Grudzien",
 			"Zebra"		=>	"Zebra");
 
-         // print each element’s name and value
+         
          foreach ( $myDictionary as $engKey => $plVal ){
             print( "<p>Angielskie slowo: <b>'$engKey'</b> po polsku znaczy <b>'$plVal'</b></p>" );
 			 
