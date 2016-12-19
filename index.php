@@ -94,7 +94,8 @@
 									<li><a href = "pages/historia.html"><b>Historia pizzy</b></a></li>
 									<li><a href = "pages/animation.html"><b>Animacja</b></a></li>
 									<li><a href = "pages/multikolumn.html"><b>Multikolumn</b></a></li>
-									<li><a href = "pages/ciekawostki.html"><b>Ciekawostki</b></a></li>
+									<li><a href = "pages/ciekawostki.php"><b>Ciekawostki</b></a></li>
+									<li><a href = "pages/login.php"><b>Zaloguj się</b></a></li>
 								</ul>
 							</nav>
 					</section>
