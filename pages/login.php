@@ -1,4 +1,4 @@
-
+ï»¿
 <?php  session_start(); 
 //passwords
  $usernamepass = array(  
@@ -53,39 +53,41 @@
 				if ( !$iserror ) //then you can log in - set session cookies
 				{
 				  $_SESSION["user"]=$fUsername;
+				  $_SESSION["pass"]=$fPassword;
 
-				   print( "<p>Hej $fUsername. Uda³o Ci siê zalogowaæ poprawnie!</p>
+				   print( "<div><p class = 'head'>Hej $fUsername. UdaÅ‚o Ci siÄ™ zalogowaÄ‡ poprawnie!</p>
 					  <p>Twoje dane:</p>
-					  <p>Nazwa u¿ytkownika: $fUsername</p>
-					  <p>Has³o: $fPassword</p>
-					  <p><a href = '../index.php'>Kliknij, ¿eby wróciæ do strony g³ównej.</a></p>
+					  <p>Nazwa uÅ¼ytkownika: $fUsername</p>
+					  <p>HasÅ‚o: $fPassword</p>
+					  <p><a href = '../index.php'>Kliknij, Å¼eby wrÃ³ciÄ‡ do strony gÅ‚Ã³wnej.</a></p></div>
 					  </body></html>" );
 				   die(); // finish the page
 				} // end if ( !$iserror )
 			} // end  if ( isset( $_POST["submit"] ) )
 			 
-			print( "<h1>Zaloguj siê:</h1>
-			<p>Wype³nij pola i kliknij Zaloguj.</p>" );
+			print( "<h1>Zaloguj siÄ™:</h1><br>
+			<p>WypeÅ‚nij pola i kliknij Zaloguj.</p><br>" );
 
 			if ( $iserror )                                              
 			{                                                            
-				print( "<p class = 'error'>Pola z * musz¹ byæ poprawnie wype³nione.</p>" );
+				print( "<p class = 'error'>Pola z * muszÄ… byÄ‡ poprawnie wypeÅ‚nione.</p><br>" );
 			} // end if
 
 			print( "<!-- post form data to login.php -->
 					<form method = 'post' action = 'login.php'>
-					<h2>Logowanie</h2>
+					<h2>Logowanie</h2><br>
 				
-				<div><label>Nazwa u¿ytkownika:</label><input type = 'text'
+				<div><label>Nazwa uÅ¼ytkownika:</label><input type = 'text'
 				name = 'fUsername' value = '" . $fUsername . "'>");
-			if ( $formerrors[ ( $fUsername )."error" ] == true ) 
+			if ( $formerrors[ "fUsernameerror" ] == true ) 
 				print( "<span class = 'error'>*</span>" );
-				
-			print("<label>Has³o:</label><input type = 'password'
+			print( "</div><br>" );
+			
+			print("<div><label>HasÅ‚o:</label><input type = 'password'
                name = 'fPassword' value = '" . $fPassword . "'>");   
-            if ( $formerrors[ ( $fPassword )."error" ] == true ) 
+            if ( $formerrors[ "fPassworderror" ] == true ) 
                print( "<span class = 'error'>*</span>" );        
-            print( "</div>" );
+            print( "</div><br>" );
         
 			print( "<!-- create a submit button -->
 				<p class = 'head'><input type = 'submit' name = 'submit'
@@ -94,11 +96,13 @@
 
 			 
 		}// end if(!isset($_SESSION["user"])
-		 print( "<p>Hej $fUsername. Jestes juz zalogowany!</p>
+		$user=$_SESSION["user"];
+		$pass=$_SESSION["pass"];
+		 print( "<p class = 'head'>Hej $user. Jestes juz zalogowany!</p>
 					  <p>Twoje dane:</p>
-					  <p>Nazwa u¿ytkownika: $fUsername</p>
-					  <p>Has³o: $fPassword</p>
-					  <p><a href = '../index.php'>Kliknij, ¿eby wróciæ do strony g³ównej.</a></p>
+					  <p>Nazwa uÅ¼ytkownika: $user</p>
+					  <p>HasÅ‚o: $pass</p>
+					  <p><a href = '../index.php'>Kliknij, Å¼eby wrÃ³ciÄ‡ do strony gÅ‚Ã³wnej.</a></p>
 					  </body></html>" );
 		
 	?>
