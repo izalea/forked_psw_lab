@@ -2,7 +2,7 @@
 	session_start(); 
 	if(!isset($_SESSION["user"])){
 		header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php');
-		exit();
+		exit;
 	}
 	else{
 		$user=$_SESSION["user"];
