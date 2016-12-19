@@ -96,13 +96,14 @@
 
 			 
 		}// end if(!isset($_SESSION["user"])
-		$user=$_SESSION["user"];
-		$pass=$_SESSION["pass"];
-		 print( "<p class = 'head'>Hej $user. Jestes juz zalogowany!</p>
+		else{
+			$user=$_SESSION["user"];
+			$pass=$_SESSION["pass"];
+			print( "<p class = 'head'>Hej $user. Jestes juz zalogowany!</p>
 					  <p>Twoje dane:</p>
 					  <p>Nazwa użytkownika: $user</p>
 					  <p>Hasło: $pass</p>
 					  <p><a href = '../index.php'>Kliknij, żeby wrócić do strony głównej.</a></p>
 					  </body></html>" );
-		
+		}
 	?>
