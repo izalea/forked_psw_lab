@@ -1,7 +1,8 @@
+<?php session_start(); 
+
+?>
+
 <!DOCTYPE html> <!-- document type declaration, must be included to render properly! -->
-
-<!-- ciekawostki.html -->
-
 <html lang="pl"> <!-- start tag -->
 	
 	<head>
@@ -80,13 +81,19 @@
 	<!-- content -->
 	
 	<body class = "BG_IMG_REPEAT_VERTICAL_LEFT"> 
-		<h1>Ciekawe Ciekawostki!</h1>
-		<?php
-		print( "<div><p>Hej nie jesteś zalogowany.</p>
+		<?php 	if(!isset($_SESSION["user"])){
+					print( "<div><p>Hej nie jesteś zalogowany.</p>
 					  <p><a href = 'login.php'>Kliknij, żeby przejść do strony logowania.</a></p></div>
 					  </body></html>" );
-				   die(); // finish the page
+					die(); // finish the page
+				}
+				else {
+					$user = $_SESSION["user"];
+					print( "<p> Zalogowany: $user.</p>");
+				}
 		?>
+		<h1>Ciekawe Ciekawostki!</h1>
+		
 		<section id="links">
 			<h2 id="id_color_green_big">Linki</h2>
 			<nav>
