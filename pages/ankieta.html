@@ -40,9 +40,9 @@
 	
 	<body class = "BG_IMG_REPEAT_HORIZONTAL_CENTER"> 
 		<nav><ul>
-			<li><a href = "../index.html"><b>Strona główna</b></a></li>
+			<li><a href = "../index.php"><b>Strona główna</b></a></li>
 			<li><a href = "menu.html#menu"><b>Menu</b></a></li>
-			<li><a href = "kontakt.html"><b>Kontakt</b></a></li>
+			<li><a href = "kontakt.php"><b>Kontakt</b></a></li>
 		</ul></nav>
 		<h1>ANKIETA!</h1>
 		<div class = "in-the-front-front ankieta-color">
@@ -92,6 +92,21 @@
 				<input id = "ending" type = "text" name = "ending"
 						placeholder = "le" />
 			</label></div>
+			
+			<h3>Wybierz jakie zwierze lubisz:</h3>
+			<select name = "fav_animal">
+				<option>Pies</option>
+				<option>Kon</option>
+				<option>Krolik</option>
+				<option>Chomik</option>
+			</select>
+			
+			<h3>Wybierz najlepsza myszke!!!</h3>
+			<p><input type = "radio" name = "myszy" value = "razer"
+               checked>Razer
+            <input type = "radio" name = "myszy" value = "logit">Logitech
+            <input type = "radio" name = "myszy" value = "ms">Microsoft</p>
+			
 			
 			<p id = "submitReset">
 				<input id  = "submit" type = "submit" name = "submit" value = "Wyślij" />

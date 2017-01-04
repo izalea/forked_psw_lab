@@ -89,7 +89,7 @@
 	
 	<body class = "BG_IMG_REPEAT_VERTICAL_LEFT"> 
 		
-		<h1><?php print("Witaj $user w");?>Ciekawe Ciekawostki!</h1>
+		<h1><?php print("Witaj $user w ");?>Ciekawe Ciekawostki!</h1>
 		
 		<section id="links">
 			<h2 id="id_color_green_big">Linki</h2>
