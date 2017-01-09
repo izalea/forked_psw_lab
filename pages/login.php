@@ -1,5 +1,8 @@
 ﻿
-<?php  session_start(); 
+<?php  
+	if(!isset($_SESSION)) {
+		session_start(); 		
+	}
 //passwords
  $usernamepass = array(  
             "admin"   => "1234",   "user1" => "pass1",
@@ -54,13 +57,16 @@
 				{
 				  $_SESSION["user"]=$fUsername;
 				  $_SESSION["pass"]=$fPassword;
-
-				   print( "<div><p class = 'head'>Hej $fUsername. Udało Ci się zalogować poprawnie!</p>
+				  
+  				   print( "<div><p class = 'head'>Hej $fUsername. Udało Ci się zalogować poprawnie!</p>
 					  <p>Twoje dane:</p>
 					  <p>Nazwa użytkownika: $fUsername</p>
 					  <p>Hasło: $fPassword</p>
-					  <p><a href = '../index.php'>Kliknij, żeby wrócić do strony głównej.</a></p></div>
+					  <p><a href = '../index.php'>Kliknij, żeby wrócić do strony głównej.</a></p>
+					  <p><a href = 'formDatabase.php'>Zawartość bazy.</a></p>
+					  <p><a href='wyloguj.php'>Wylogowanie</a></p></div>
 					  </body></html>" );
+					  
 				   die(); // finish the page
 				} // end if ( !$iserror )
 			} // end  if ( isset( $_POST["submit"] ) )
@@ -97,13 +103,18 @@
 			 
 		}// end if(!isset($_SESSION["user"])
 		else{
-			$user=$_SESSION["user"];
-			$pass=$_SESSION["pass"];
+			$user=$_SESSION['user'];
+			$pass=$_SESSION['pass'];
 			print( "<p class = 'head'>Hej $user. Jestes juz zalogowany!</p>
 					  <p>Twoje dane:</p>
 					  <p>Nazwa użytkownika: $user</p>
 					  <p>Hasło: $pass</p>
 					  <p><a href = '../index.php'>Kliknij, żeby wrócić do strony głównej.</a></p>
+					  <p><a href = 'formDatabase.php'>Zawartość bazy.</a></p>
+					  <p><a href='wyloguj.php'>Wylogowanie</a></p>
 					  </body></html>" );
 		}
+		
 	?>
+
+	</body>

@@ -1,8 +1,9 @@
 <?php 
 	session_start(); 
 	if(!isset($_SESSION["user"])){
-		header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php');
-		exit;
+		header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php'); // - wersja Sylwia
+		//include('login.php - wersja Ania
+		exit();
 	}
 	else{
 		$user=$_SESSION["user"];
