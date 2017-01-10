@@ -45,7 +45,7 @@
 							Forma: <input id = "surname" type = "text" size = "25" maxlength = "50" value = "To jest forma o id info"/> 
 						</p>
 					</form>
-					<button onclick="namedItemFunction()"> Wyszukaj forme po id</button>
+					<button onclick="namedItemFunction()"> Wyszukaj forme po id: :)</button>
 					<p id="formResult"></p>
 			
 			<!-- nested sections -->

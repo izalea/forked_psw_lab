@@ -3,7 +3,8 @@
 		session_start(); 		
 	}
 	if(!isset($_SESSION["user"])){
-		header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php'); // - wersja Sylwia
+		//header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php'); // - wersja Sylwia
+		header('Location: http://localhost/forked_psw_lab/pages/login.php');
 		//include('login.php - wersja Ania
 		exit;
 	}
@@ -61,24 +62,29 @@
                $iserror = true;
             } // end if
 
-            if ( $email == "" ) 
+            if ( $email =="" ||!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/",$email) ) 
             {
                $formerrors[ "emailerror" ] = true;
                $iserror = true;
             } // end if       
-/*
-            if ( !preg_match( "/^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$/", 
+			
+			
+			
+            if ( $phone == ""||!preg_match( "/^\([0-9]{3}\)[0-9]{3}-[0-9]{4}$/", 
                $phone ) ) 
             {
                $formerrors[ "phoneerror" ] = true;
                $iserror = true;
             } // end if
- */           
+           
             if ( !$iserror )  
             {
-				session_start();
-				$user=$_SESSION["user"];
-				$pass=$_SESSION["pass"];
+			
+					session_start(); 
+					$user=$_SESSION["user"];
+					$pass=$_SESSION["pass"];					
+				
+				
 				
                // build INSERT query
                $query = "UPDATE userdata SET
@@ -120,7 +126,7 @@
 
          if ( $iserror )                                              
          {                                                            
-            print( "<p class = 'error'>Pola oznaczone * są obowiązkowe do wypełnienia.</p>" );
+            print( "<p class = 'error'>Pola oznaczone * są obowiązkowe do wypełnienia poprawnie.</p>" );
          } // end if
 
          print( "<!-- post form data to rejestracja.php -->
@@ -137,7 +143,9 @@
             
             print( "</div>" );
          } // end foreach
-
+		 
+		 if ( $formerrors[ "emailerror" ] ) 
+            print( "<p class = 'error'>Musisz wpisac poprawny email." );
          if ( $formerrors[ "phoneerror" ] ) 
             print( "<p class = 'error'>Format numeru tel
                (***)***-****" );

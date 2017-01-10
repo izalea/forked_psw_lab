@@ -4,10 +4,11 @@
 		session_start(); 		
 	}
 //passwords
- $usernamepass = array(  
-            "admin"   => "1234",   "user1" => "pass1",
-            "user2"     => "pass2", "Zebra" => "Zebra");
+ //$usernamepass = array(  
+            //"admin"   => "1234",   "user1" => "pass1",
+            //"user2"     => "pass2", "Zebra" => "Zebra");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pl"> 
@@ -28,6 +29,7 @@
       </style>
 	</head>
 	<body>
+
 	<?php
 		if(!isset($_SESSION["user"])){
 			 // variables used in script
@@ -36,7 +38,33 @@
 			$iserror = false;
 			$formerrors = 
 				array( "fUsernameerror" => false, "fPassworderror" => false);
+			// build SELECT query
+			$query = "SELECT login,haslo FROM userdata";
+        
+			 // Connect to MySQL
+			 if ( !( $database = mysql_connect( "localhost",  
+				"nazwa_uzytkownika", "haslo_uzytkownika" ) ) )
+				die( "<p>Nie ma połączenia z bazą</p></body></html>" );
+	   
+			 // open nazwa_uzytkownika database
+			 if ( !mysql_select_db( "users", $database ) )
+				die( "<p>Błąd dostępu do bazy danych</p>
+				   </body></html>" );
+
+			 // query nazwa_uzytkownika database
+			 if ( !( $result = mysql_query( $query, $database ) ) ) 
+			 {
+				print( "<p>Błąd odczytu danych z bazy!</p>" );
+				die( mysql_error() . "</body></html>" );
+			 }
+			 $usernamepass = array();
+			 while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 			
+				 $usernamepass[$row["login"]] = $row["haslo"];
+			}
+			mysql_free_result($result);
+			mysql_close( $database );
+
 			// ensure that all fields have been filled in correctly
 			if ( isset( $_POST["submit"] ) )
 			{
