@@ -1,7 +1,8 @@
 <?php 
 	session_start(); 
 	if(!isset($_SESSION["user"])){
-		header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php'); // - wersja Sylwia
+		//header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php'); // - wersja Sylwia
+		header('Location: http://localhost/forked_psw_lab/pages/login.php');
 		//include('login.php - wersja Ania
 		exit();
 	}
