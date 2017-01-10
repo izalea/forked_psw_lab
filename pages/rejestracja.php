@@ -46,10 +46,43 @@
          // array of name values for the text input fields
          $inputlist = array( "fname" => "Imie", "lname" => "Nazwisko", "email" => "Email",
             "phone" => "Numer tel." );
+		
+//get data from database
+		
+		// build SELECT query
+			$query = "SELECT imie, nazwisko, email, telefon, miasto FROM userdata WHERE login='$user'";
+        
+			 // Connect to MySQL
+			 if ( !( $database = mysql_connect( "localhost",  
+				"nazwa_uzytkownika", "haslo_uzytkownika" ) ) )
+				die( "<p>Nie ma połączenia z bazą</p></body></html>" );
+	   
+			 // open nazwa_uzytkownika database
+			 if ( !mysql_select_db( "users", $database ) )
+				die( "<p>Błąd dostępu do bazy danych</p>
+				   </body></html>" );
 
+			 // query nazwa_uzytkownika database
+			 if ( !( $result = mysql_query( $query, $database ) ) ) 
+			 {
+				print( "<p>Błąd odczytu danych z bazy!</p>" );
+				die( mysql_error() . "</body></html>" );
+			 }
+			 while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+				$fname = $row["imie"];
+				$lname = $row["nazwisko"];
+				$email = $row["email"];
+				$phone = $row["telefon"];
+				$city= $row["miasto"];
+				 
+			}
+			mysql_free_result($result);
+			mysql_close( $database );
+		
+		
          // ensure that all fields have been filled in correctly
          if ( isset( $_POST["submit"] ) )
-         {
+         {	
             if ( $fname == "" )                   
             {
                $formerrors[ "fnameerror" ] = true;
