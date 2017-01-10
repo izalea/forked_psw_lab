@@ -63,6 +63,7 @@
 				 $usernamepass[$row["login"]] = $row["haslo"];
 			}
 			mysql_free_result($result);
+			mysql_close( $database );
 
 			// ensure that all fields have been filled in correctly
 			if ( isset( $_POST["submit"] ) )
