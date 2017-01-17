@@ -1,12 +1,8 @@
-﻿
-<?php  
+﻿<?php 
 	if(!isset($_SESSION)) {
 		session_start(); 		
 	}
-//passwords
- //$usernamepass = array(  
-            //"admin"   => "1234",   "user1" => "pass1",
-            //"user2"     => "pass2", "Zebra" => "Zebra");
+	
 ?>
 
 
@@ -122,10 +118,27 @@
             if ( $formerrors[ "fPassworderror" ] == true ) 
                print( "<span class = 'error'>*</span>" );        
             print( "</div><br>" );
-        
+		
 			print( "<!-- create a submit button -->
 				<p class = 'head'><input type = 'submit' name = 'submit'
 				value = 'Zaloguj'></p></form></body></html>" );
+					
+        // second form registration 
+			print( "<!-- post form data to newreg.php -->
+					<form method = 'post' action = 'newreg.php'>
+					<h2>Rejestracja</h2><br>
+				
+				<div><label>Nazwa użytkownika:</label><input type = 'text'
+				name = 'user2' value = ''><br>");
+		
+			
+			print("<div><label>Hasło:</label><input type = 'password'
+               name = 'pass2' value = ''>");   
+            
+        
+			print( "<!-- create a submit button -->
+				<p class = 'head'><input type = 'submit' name = 'submit'
+				value = 'Zarejestruj'></p></form></body></html>" );
 			
 
 			 

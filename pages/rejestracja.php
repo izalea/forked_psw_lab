@@ -1,12 +1,10 @@
 <?php 
-	if(!isset($_SESSION)) {
-		session_start(); 		
-	}
+	session_start(); 
 	if(!isset($_SESSION["user"])){
 		//header('Location: http://pswpizzeria.azurewebsites.net/pages/login.php'); // - wersja Sylwia
 		header('Location: http://localhost/forked_psw_lab/pages/login.php');
 		//include('login.php - wersja Ania
-		exit;
+		exit();
 	}
 	else{
 		$user=$_SESSION["user"];
@@ -28,26 +26,7 @@
    </head>
    <body>
       <?php
-	  print("Jesteś zalogowany jako $user");
-         // variables used in script
-         $fname = isset($_POST[ "fname" ]) ? $_POST[ "fname" ] : "";
-         $lname = isset($_POST[ "lname" ]) ? $_POST[ "lname" ] : "";
-         $email = isset($_POST[ "email" ]) ? $_POST[ "email" ] : "";
-         $phone = isset($_POST[ "phone" ]) ? $_POST[ "phone" ] : "";
-         $city = isset($_POST[ "city" ]) ? $_POST[ "city" ] : "";
-         $iserror = false;
-         $formerrors = 
-            array( "fnameerror" => false, "lnameerror" => false, 
-               "emailerror" => false, "phoneerror" => false );
-
-         // array of book titles
-         $citylist = array( "Kraków", "Katowice", "Warszawa", "Wrocław" );
-
-         // array of name values for the text input fields
-         $inputlist = array( "fname" => "Imie", "lname" => "Nazwisko", "email" => "Email",
-            "phone" => "Numer tel." );
-		
-//get data from database
+	//get data from database
 		
 		// build SELECT query
 			$query = "SELECT imie, nazwisko, email, telefon, miasto FROM userdata WHERE login='$user'";
@@ -68,16 +47,31 @@
 				print( "<p>Błąd odczytu danych z bazy!</p>" );
 				die( mysql_error() . "</body></html>" );
 			 }
-			 while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-				$fname = $row["imie"];
-				$lname = $row["nazwisko"];
-				$email = $row["email"];
-				$phone = $row["telefon"];
-				$city= $row["miasto"];
-				 
-			}
-			mysql_free_result($result);
-			mysql_close( $database );
+			 $row = mysql_fetch_array($result, MYSQL_ASSOC);
+			
+			
+	  print("Jesteś zalogowany jako $user");
+         // variables used in script
+         $fname = isset($_POST[ "fname" ]) ? $_POST[ "fname" ] : $row["imie"];
+         $lname = isset($_POST[ "lname" ]) ? $_POST[ "lname" ] : $row["nazwisko"];
+         $email = isset($_POST[ "email" ]) ? $_POST[ "email" ] : $row["email"];
+         $phone = isset($_POST[ "phone" ]) ? $_POST[ "phone" ] : $row["telefon"];
+         $city = isset($_POST[ "city" ]) ? $_POST[ "city" ] : $row["miasto"];
+		 mysql_free_result($result);
+		mysql_close( $database );
+         $iserror = false;
+         $formerrors = 
+            array( "fnameerror" => false, "lnameerror" => false, 
+               "emailerror" => false, "phoneerror" => false );
+
+         // array of book titles
+         $citylist = array( "Kraków", "Katowice", "Warszawa", "Wrocław" );
+
+         // array of name values for the text input fields
+         $inputlist = array( "fname" => "Imie", "lname" => "Nazwisko", "email" => "Email",
+            "phone" => "Numer tel." );
+		
+
 		
 		
          // ensure that all fields have been filled in correctly
