@@ -34,7 +34,7 @@
 					<nav>				
 						<ul class = "grad">
 							<li class="dropdown">
-								<a  href="pages/menu.html#menu" class = "dropmenu">Menu</a>
+								<a  href="pages/menu.aspx" class = "dropmenu">Menu</a>
 									<div class="dropdown-content">
 										<a href="pages/kontakt.aspx">Link 1</a>
                                         <a href="pages/kontakt.aspx">Link 2</a>
@@ -42,7 +42,7 @@
 									</div>
 							</li>								
 							<li><a href = "pages/kontakt.aspx"><b>Kontakt</b></a></li>
-							<li><a href = "pages/historia.aspx"><b>Historia pizzy</b></a></li>
+							<li><a href = "pages/historia.aspx"><b>Historia</b></a></li>
 						</ul>
 					</nav>
 	
